@@ -1,0 +1,9 @@
+.spacer {
+    flex: 1 1 auto;
+  }
+
+  .mat-toolbar.mat-primary {
+    background: #f9fafa;
+    color: rgb(8, 8, 8);
+  }
+  
