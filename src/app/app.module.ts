@@ -14,6 +14,7 @@ import { RegisterComponent } from './components/register/register.component';
 import {MatCardModule } from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import { DashnavbarComponent } from './components/dashnavbar/dashnavbar.component';
+import { LoaderComponent } from './components/loader/loader.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { DashnavbarComponent } from './components/dashnavbar/dashnavbar.componen
     ResetPasswordComponent,
     RegisterComponent,
     DashnavbarComponent,
+    LoaderComponent,
   ],
   imports: [
     BrowserModule,
