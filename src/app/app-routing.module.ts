@@ -1,18 +1,20 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './components/home/home.component';
-import { LoginComponent } from './components/login/login.component';
-import { RegisterComponent } from './components/register/register.component';
-import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
-import {FooterComponent} from './components/footer/footer.component';
+// views
+import { HomeComponent } from './views/home/home.component';
+import { LoginComponent } from './views/login/login.component';
+import { RegisterComponent } from './views/register/register.component';
+import { ResetPasswordComponent } from './views/reset-password/reset-password.component';
+import { DashboardComponent } from './views/dashboard/dashboard.component';
 
 
-
+// routes
 const routes: Routes = [
   { path: '', component: HomeComponent, pathMatch: "full" },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'reset', component: ResetPasswordComponent },
+  { path: 'reset', component: DashboardComponent },
 ];
 
 @NgModule({

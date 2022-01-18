@@ -11,7 +11,7 @@ export class HeaderComponent implements OnInit {
   constructor(private router: Router)  { }
   ngOnInit() {
   }
-  
+
   @HostBinding("class.menu-opened") menuOpened = false;
 
   toggleMenu() {
@@ -21,7 +21,7 @@ export class HeaderComponent implements OnInit {
   onClickButton(){
     console.log("btnclicked");
   }
-  btnClick=  () => {
+  gotToLogin=  () => {
     this.router.navigateByUrl('/login');
 };
 

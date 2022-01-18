@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 import { FooterComponent } from './footer/footer.component';
-import { HomenavbarComponent } from './homenavbar/homenavbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 
 @NgModule({
@@ -13,12 +12,10 @@ import { SidebarComponent } from './sidebar/sidebar.component';
   ],
   declarations: [
     FooterComponent,
-    HomenavbarComponent,
     SidebarComponent
   ],
   exports: [
     FooterComponent,
-    HomenavbarComponent,
     SidebarComponent
   ]
 })
