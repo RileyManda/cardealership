@@ -1,13 +1,12 @@
-<mat-toolbar color="secondary">
+<mat-toolbar color="warn">
     <img src="assets/app_logo.png" />
-    <span class="spacer"></span>
     <span>OffTheBlock</span>
     <span class="spacer"></span>
-    <mat-menu #menu="matMenu">
-        <button mat-menu-item>Item 1</button>
-        <button mat-menu-item>Item 2</button>
-    </mat-menu>
-    <button mat-icon-button disabled aria-label="signin">
+        <a  mat-button>Home</a>
+        <a mat-button>About</a>
+        <a mat-button>Partners</a>
+        <a mat-button>Contact</a>
+    <a mat-icon-button aria-label="signin" (click)="btnClick();" >
         <mat-icon>account_circle</mat-icon>
-    </button>
+    </a>
 </mat-toolbar>

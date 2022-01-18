@@ -23,6 +23,7 @@ import { DashnavbarComponent } from './components/dashnavbar/dashnavbar.componen
 import { LoaderComponent } from './components/loader/loader.component';
 import { HeaderComponent } from './components/header/header.component';
 import { DashheaderComponent } from './components/dashheader/dashheader.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 
 
@@ -39,6 +40,7 @@ import { DashheaderComponent } from './components/dashheader/dashheader.componen
     LoaderComponent,
     HeaderComponent,
     DashheaderComponent,
+    PageNotFoundComponent,
    
   ],
   imports: [
