@@ -1,3 +1,4 @@
+import { MatMenuModule } from '@angular/material/menu';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -10,8 +11,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { MatIconModule } from "@angular/material/icon";
 
-
-import { HomenavbarComponent } from './components/homenavbar/homenavbar.component';
+// components
 import { FooterComponent } from './components/footer/footer.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { HomeComponent } from './components/home/home.component';
@@ -21,13 +21,14 @@ import { RegisterComponent } from './components/register/register.component';
 
 import { DashnavbarComponent } from './components/dashnavbar/dashnavbar.component';
 import { LoaderComponent } from './components/loader/loader.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
+import { HeaderComponent } from './components/header/header.component';
+import { DashheaderComponent } from './components/dashheader/dashheader.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomenavbarComponent,
     FooterComponent,
     SidebarComponent,
     HomeComponent,
@@ -36,14 +37,21 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     RegisterComponent,
     DashnavbarComponent,
     LoaderComponent,
-    NavbarComponent,
+    HeaderComponent,
+    DashheaderComponent,
+   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    MatButtonModule,
+    MatMenuModule
+
+    
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
