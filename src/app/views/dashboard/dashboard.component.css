@@ -1,4 +1,10 @@
 
 .content {
-  margin-top: 58px
+  margin-top: 58px;
+  justify-content: center;
+
+}
+table {
+  width: 100%;
+  justify-content: center;
 }

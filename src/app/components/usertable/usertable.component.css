@@ -1,6 +1,4 @@
-table {
-  width: 100%;
-}
+
 
 .mat-form-field {
   font-size: 14px;
@@ -10,3 +8,14 @@ table {
 td, th {
   width: 25%;
 }
+
+
+/* .mat-header-cell {
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mat-cell {
+  text-align: center;
+  justify-content:center;
+} */
