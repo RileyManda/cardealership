@@ -17,6 +17,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatOptionModule } from '@angular/material/core';
 import { MaterialModule } from './material-module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { UsertableComponent } from './components/usertable/usertable.component';
+import { ResetComponent } from './views/reset/reset.component';
 
 
 
@@ -35,6 +37,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     DashheaderComponent,
     PageNotFoundComponent,
     DashboardComponent,
+    UsertableComponent,
+    ResetComponent,
 
   ],
   imports: [
