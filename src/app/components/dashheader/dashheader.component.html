@@ -1,8 +1,18 @@
-<mat-toolbar color="warn">
-    <img src="assets/app_logo.png" />
-    <span>OffTheBlock</span>
-    <span class="spacer"></span>
-    <a mat-icon-button aria-label="signin" >
-        <mat-icon>account_circle</mat-icon>
-    </a>
+<mat-toolbar color="">
+  <img src="assets/app_logo.png" />
+  <span class="gap"></span>
+  <span>OffTheBlock</span>
+  <span class="spacer"></span>
+
+  <a mat-icon-button aria-label="signin" [matMenuTriggerFor]="menu" >
+      <mat-icon>account_circle</mat-icon>
+  </a>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>Change Password</button>
+    <button mat-menu-item>Add Systems Administrator</button>
+    <button mat-menu-item>Manage Systems Administrator</button>
+    <button mat-menu-item>Manage Vehicle Make</button>
+    <button mat-menu-item>Main Menu</button>
+    <button mat-menu-item routerLink="/login">LogOut</button>
+  </mat-menu>
 </mat-toolbar>
