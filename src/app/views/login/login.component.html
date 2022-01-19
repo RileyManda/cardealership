@@ -14,10 +14,10 @@
             <mat-label>Password</mat-label>
             <input matInput placeholder="Password">
             <mat-icon matSuffix>visibility</mat-icon>
-          </mat-form-field><br><br>
-          <mat-slide-toggle>Remember Me</mat-slide-toggle><br><br>
-          <button mat-raised-button color="primary">Primary</button>
-          <a class="already" href="#">You already have an account? Login here.</a>
+          </mat-form-field><br>
+          <mat-checkbox class="">Remember me</mat-checkbox><br><br>
+          <button mat-raised-button color="primary" routerLink="/dashboard">SignIn</button><br><br>
+          <p>Not already a member? <a mat-button routerLink="/register"> SignUp</a></p>
       </form>
        <div class="image-holder"></div>
   </div>

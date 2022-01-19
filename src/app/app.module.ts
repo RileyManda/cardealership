@@ -16,6 +16,7 @@ import { DashboardComponent } from './views/dashboard/dashboard.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatOptionModule } from '@angular/material/core';
 import { MaterialModule } from './material-module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -39,7 +40,8 @@ import { MaterialModule } from './material-module';
   imports: [
     AppRoutingModule,
     MaterialModule,
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

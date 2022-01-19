@@ -1,6 +1,23 @@
-<div class="app-content">
-  <div class="group">
+<div class="register-photo">
+  <div class="form-container">
+      <form>
+          <h2 class="text-center"><strong>Account sign up</strong></h2>
 
-      
-    </div>
+          <mat-form-field appearance="fill">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Email">
+            <mat-icon matSuffix>email</mat-icon>
+          </mat-form-field>
+
+          <mat-form-field appearance="fill">
+            <mat-label>Password</mat-label>
+            <input matInput placeholder="Password">
+            <mat-icon matSuffix>visibility</mat-icon>
+          </mat-form-field><br>
+          <mat-checkbox class="">Remember me</mat-checkbox><br><br>
+          <button mat-raised-button color="primary" routerLink="/signin" color="primary">SignIn</button><br><br>
+          <p>Already have an account <a mat-button routerLink="/login"> SignIn</a></p>
+      </form>
+       <div class="image-holder"></div>
   </div>
+</div>
