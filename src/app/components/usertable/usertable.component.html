@@ -1,7 +1,7 @@
 
 
 
-
+<div class ="btn-align">
   <form class="search-form">
     <mat-form-field appearance="standard" class="search-fullwidth">
       <mat-icon matSuffix>search</mat-icon>
@@ -11,6 +11,16 @@
        aria-label="Search" #input>
     </mat-form-field>
   </form>
+
+  <div class="example-button-row">
+    <button mat-raised-button>Bulk Actions</button>
+    <button mat-raised-button>Add Dealerships</button>
+    <button mat-raised-button>Filters</button>
+
+  </div>
+</div>
+
+
 <div class="mat-elevation-z8">
   <table mat-table [dataSource]="dataSource" matSort>
 

@@ -18,8 +18,8 @@ import { MaterialModule } from './material-module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UsertableComponent } from './components/usertable/usertable.component';
 import { ResetComponent } from './views/reset/reset.component';
-
-
+import { AddDealershipComponent } from './components/add-dealership/add-dealership.component';
+import { NotificationComponent } from './components/notification/notification.component';
 
 
 
@@ -38,6 +38,8 @@ import { ResetComponent } from './views/reset/reset.component';
     DashboardComponent,
     UsertableComponent,
     ResetComponent,
+    AddDealershipComponent,
+    NotificationComponent
 
   ],
   imports: [
