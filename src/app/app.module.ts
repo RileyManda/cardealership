@@ -6,7 +6,6 @@ import {BrowserModule} from '@angular/platform-browser';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './views/home/home.component';
 import { LoginComponent } from './views/login/login.component';
-import { ResetPasswordComponent } from './views/reset-password/reset-password.component';
 import { RegisterComponent } from './views/register/register.component';
 import { LoaderComponent } from './components/loader/loader.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -31,7 +30,6 @@ import { ResetComponent } from './views/reset/reset.component';
     FooterComponent,
     HomeComponent,
     LoginComponent,
-    ResetPasswordComponent,
     RegisterComponent,
     LoaderComponent,
     HeaderComponent,

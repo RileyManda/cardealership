@@ -9,7 +9,15 @@ td, th {
   width: 25%;
 }
 
+.search-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
 
+.search-full-width {
+  width: 100%;
+}
 /* .mat-header-cell {
   flex-direction: column;
   justify-content: center;
@@ -44,6 +52,17 @@ td, th {
   box-shadow: 0 1px 0 0 #4dd0e1;
   }
 
+  .button {
+  display: inline-block;
+  vertical-align: top;
+  width: 80px;
+  height: 30px;
+  line-height: 30px;
+  background: gray;
+  margin: 0 4px;
+  text-align: center;
+}
+
   .active-cyan input[type=text] {
   border-bottom: 1px solid #4dd0e1;
   box-shadow: 0 1px 0 0 #4dd0e1;
@@ -62,4 +81,35 @@ td, th {
   .active-pink .fa,
   .active-pink-2 .fa {
   color: #f48fb1;
+  }
+  section {
+    display: table;
+  }
+
+  .btn-label {
+    display: table-cell;
+    font-size: 14px;
+    margin-left: 8px;
+    min-width: 120px;
+  }
+
+  .button-row {
+    display: table-cell;
+    width: 490px;
+  }
+
+  .button-row .mat-button-base {
+    margin: 8px 8px 8px 0;
+  }
+
+  .flex-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: center;
+    width: 120px;
   }

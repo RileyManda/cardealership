@@ -1,1 +1,30 @@
-<p>reset works!</p>
+<div class="register-photo">
+  <div class="form-container">
+      <form>
+          <h2 class="text-center"><strong>Reset password</strong></h2>
+
+          <mat-form-field appearance="fill">
+            <mat-label>OldPassword</mat-label>
+            <input matInput placeholder="Password">
+            <mat-icon matSuffix>visibility</mat-icon>
+          </mat-form-field><br>
+
+          <mat-form-field appearance="fill">
+            <mat-label>NewPassword</mat-label>
+            <input matInput placeholder="Password">
+            <mat-icon matSuffix>visibility</mat-icon>
+          </mat-form-field><br>
+          <mat-form-field appearance="fill">
+            <mat-label>Confirm New Password</mat-label>
+            <input matInput placeholder="Password">
+            <mat-icon matSuffix>visibility</mat-icon>
+          </mat-form-field><br>
+          <p> New password must be minimum of <br>
+            7 digits alpha and numeric with at<br>
+             least 1 special character.</p><br>
+          <button mat-raised-button color="primary" routerLink="/login">Reset</button><br><br>
+          <p>Not already a member? <a mat-button routerLink="/register"> Sign in</a></p>
+      </form>
+       <div class="image-holder"></div>
+  </div>
+</div>
