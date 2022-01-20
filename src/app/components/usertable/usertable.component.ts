@@ -75,7 +75,7 @@ const Action: string[] = [
 @Component({
   selector: 'app-usertable',
   templateUrl: './usertable.component.html',
-  styleUrls: ['./usertable.component.css']
+  styleUrls: ['./usertable.component.scss']
 })
 export class UsertableComponent implements AfterViewInit {
   displayedColumns: string[] = ['id','dealership', 'name','administrator','action'];
