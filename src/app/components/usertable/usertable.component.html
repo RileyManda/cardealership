@@ -32,20 +32,29 @@
 
        <!-- Dealership Column -->
        <ng-container matColumnDef="dealership">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Dealership </th>
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Dealership# </th>
         <td mat-cell *matCellDef="let row"> {{row.dealership}} </td>
       </ng-container>
 
     <!-- Name Column -->
     <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header> DealershipName </th>
-      <td mat-cell *matCellDef="let row"> {{row.name}} </td>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Dealership Name </th>
+      <td mat-cell *matCellDef="let row">
+        {{row.name}}
+       </td>
     </ng-container>
 
     <!-- Administrator Column -->
     <ng-container matColumnDef="administrator">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> Administrator </th>
-      <td mat-cell *matCellDef="let row"> {{row.administrator}} </td>
+      <td mat-cell *matCellDef="let row">
+        <mat-chip
+        icon={icon}>
+        {{row.administrator}}
+        </mat-chip>
+
+
+      </td>
     </ng-container>
 
         <!-- Action Column -->

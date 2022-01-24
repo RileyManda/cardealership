@@ -15,12 +15,12 @@
   max-width: 900px;
   width: 90%;
   margin: 0 auto;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1)
+  box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 }
 
 .register-photo form {
   display: table-cell;
-  width: 400px;
+  width: 350px;
   background-color: #ffffff;
   padding: 40px 60px;
   color: #0a0a0a
@@ -87,4 +87,36 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+
+.mat-form-field-appearance-fill .mat-form-field-flex {
+  border: 1px solid #808080;
+  background-color: #ffffff !important;
+}
+
+::ng-deep .mat-form-field-underline {
+  display: none;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+::ng-deep .custom-frame {
+  & .mat-checkbox-background, .mat-checkbox-frame {
+    border-radius: 70% !important;
+  }
+}
+
+mat-icon {
+  color: #a9a9a9;
+}
+
+.member-link {
+  text-align: center;
+}
+
+.member-link a {
+  color: #2d6db1;
 }

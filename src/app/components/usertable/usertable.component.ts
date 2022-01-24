@@ -34,7 +34,7 @@ const Dealership: string[] = [
   'Elizabeth',
 ];
 const DealershipName: string[] = [
-  'Maia',
+  'MiaA',
   'Asher',
   'Olivia',
   'Atticus',
@@ -85,7 +85,6 @@ export class UsertableComponent implements AfterViewInit {
 
 
   constructor() {
-    // Create 100 users
     const users = Array.from({length: 100}, (_, k) => createNewUser(k + 1));
 
 

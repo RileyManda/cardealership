@@ -24,6 +24,7 @@ import { NotificationComponent } from './components/notification/notification.co
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +40,7 @@ import { NotificationComponent } from './components/notification/notification.co
     UsertableComponent,
     ResetComponent,
     AddDealershipComponent,
-    NotificationComponent
+    NotificationComponent,
 
   ],
   imports: [
