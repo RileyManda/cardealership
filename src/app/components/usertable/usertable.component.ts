@@ -2,15 +2,19 @@ import { Component, OnInit,AfterViewInit, ViewChild } from '@angular/core';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
+import {SelectionModel} from '@angular/cdk/collections';
 export interface UserData {
-  id: string;
+  id: number;
   dealership: string;
   name: string;
   administrator: string;
   action: string;
 }
 /** Constants used to fill up our data base. */
-
+const ELEMENT_DATA: UserData[] = [
+  {id :1, dealership: 'Maia',name: 'Maia',administrator: 'John',action: '+'},
+  {id :1, dealership: 'Asher',name: 'Olivia',administrator: 'Asher',action: '+'},
+];
 
 const Dealership: string[] = [
   'Maia',
@@ -78,8 +82,9 @@ const Action: string[] = [
   styleUrls: ['./usertable.component.scss']
 })
 export class UsertableComponent implements AfterViewInit {
-  displayedColumns: string[] = ['id','dealership', 'name','administrator','action'];
-  dataSource: MatTableDataSource<UserData>;
+  displayedColumns: string[] = ['select','id','dealership', 'name','administrator','action'];
+  dataSource= new MatTableDataSource<UserData>(ELEMENT_DATA);
+  selection = new SelectionModel<UserData>(true, []);
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
@@ -91,6 +96,7 @@ export class UsertableComponent implements AfterViewInit {
     // Assign the data to the data source for the table to render
     this.dataSource = new MatTableDataSource(users);
   }
+
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
@@ -102,6 +108,30 @@ export class UsertableComponent implements AfterViewInit {
     if (this.dataSource.paginator) {
       this.dataSource.paginator.firstPage();
     }
+  }
+
+  /** Whether the number of selected elements matches the total number of rows. */
+  isAllSelected() {
+    const numSelected = this.selection.selected.length;
+    const numRows = this.dataSource.data.length;
+    return numSelected === numRows;
+  }
+
+  /** Selects all rows if they are not all selected; otherwise clear selection. */
+  masterToggle() {
+    if (this.isAllSelected()) {
+      this.selection.clear();
+      return;
+    }
+
+    this.selection.select(...this.dataSource.data);
+  }
+  /** The label for the checkbox on the passed row */
+  checkboxLabel(row?: UserData): string {
+    if (!row) {
+      return `${this.isAllSelected() ? 'deselect' : 'select'} all`;
+    }
+    return `${this.selection.isSelected(row) ? 'deselect' : 'select'} row ${row.id + 1}`;
   }
 }
 /** Builds and returns a new User. */
@@ -133,7 +163,7 @@ function createNewUser(id: number): UserData {
 
 
   return {
-    id: id.toString(),
+    id: id,
     dealership: dealership,
     name: name,
     administrator: Administrator[Math.round(Math.random() * (Administrator.length - 1))],
