@@ -26,3 +26,9 @@
   cursor: pointer;
   position: absolute;
 }
+
+
+
+.form-full-width {
+  width: 100%;
+}

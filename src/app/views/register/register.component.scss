@@ -1,5 +1,5 @@
 .register-photo {
-  background: #f1f7fc;
+  background: #ffffff;
   padding: 80px 0
 }
 
@@ -23,7 +23,8 @@
   width: 350px;
   background-color: #ffffff;
   padding: 40px 60px;
-  color: #0a0a0a
+  color: #0a0a0a;
+  height: 450px;
 }
 
 @media (max-width:991px) {
@@ -56,7 +57,7 @@
 }
 
 .register-photo form .btn-primary {
-  background: rgb(255, 255, 255);
+  background: #ffffff;
   border: none;
   border-radius: 4px;
   padding: 11px;
@@ -68,7 +69,7 @@
 
 .register-photo form .btn-primary:hover,
 .register-photo form .btn-primary:active {
-  background: rgb(255, 255, 255)
+  background: #ffffff
 }
 
 .register-photo form .btn-primary:active {
@@ -88,7 +89,6 @@
   flex-direction: row;
   justify-content: space-between;
 }
-
 
 .mat-form-field-appearance-fill .mat-form-field-flex {
   border: 1px solid #808080;
@@ -119,4 +119,26 @@ mat-icon {
 
 .member-link a {
   color: #2d6db1;
+}
+
+.validation-error {
+  background: #ea2328;
+  color: #ffffff;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+p {
+  color: #808080;
+}
+
+.remember-me-check {
+  font-size: 12px !important;
+  color: #808080 !important;
+}
+
+input[type="checkbox"] {
+  background-color: #07abe9 !important;
+  border-color: #07abe9 !important;
 }
