@@ -1,0 +1,16 @@
+<mat-form-field class="example-chip-list" appearance="fill">
+  <mat-icon>add</mat-icon>
+  <mat-chip-list #chipList aria-label="Video keywords" >
+    <mat-chip
+        *ngFor="let keyword of keywords"
+        [selected]="keyword"
+        [value]="keyword"
+        (removed)="removeKeyword(keyword)">
+      {{keyword}}
+    </mat-chip>
+    <input
+      placeholder="New keyword..."
+      [matChipInputFor]="chipList"
+      (matChipInputTokenEnd)="addKeywordFromInput($event)">
+  </mat-chip-list>
+</mat-form-field>

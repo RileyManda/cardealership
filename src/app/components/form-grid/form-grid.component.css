@@ -32,3 +32,8 @@
 .form-full-width {
   width: 100%;
 }
+.save-button {
+  background: #04C35C;
+  color: #FFFFFF;
+
+}

@@ -24,11 +24,14 @@
             </mat-form-field>
 	</mat-grid-tile>
 
-  
+
 	<mat-grid-tile>
+
+
 		<mat-form-field appearance="outline">
+      <mat-icon matSuffix>search</mat-icon>
 			<mat-label>Affiliated Dealerships</mat-label>
-			<input matInput >
+			<input matInput  placeholder="Affiliated Dealerships">
             </mat-form-field>
 	</mat-grid-tile>
 
@@ -185,10 +188,7 @@
             </mat-form-field>
 	</mat-grid-tile>
 	<mat-grid-tile>
-		<mat-form-field appearance="outline">
-			<mat-label>Platinum Mechanicsburg</mat-label>
-			<input matInput >
-            </mat-form-field>
+    <app-admin-checkboxes></app-admin-checkboxes>
 	</mat-grid-tile>
 
 </mat-grid-list>  <br>
@@ -216,10 +216,7 @@
             </mat-form-field>
 	</mat-grid-tile>
 	<mat-grid-tile>
-		<mat-form-field appearance="outline">
-			<mat-label>Platinum Mechanicsburg</mat-label>
-			<input matInput >
-            </mat-form-field>
+	<button mat-raised-button class ="save-button ">Update Details</button>
 	</mat-grid-tile>
 
 </mat-grid-list>  <br>
