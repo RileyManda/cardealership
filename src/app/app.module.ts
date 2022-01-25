@@ -21,6 +21,8 @@ import { ResetComponent } from './views/reset/reset.component';
 import { NotificationComponent } from './components/notification/notification.component';
 import { AddAdminDialogComponent } from './components/add-admin-dialog/add-admin-dialog.component';
 import { AddDealershipComponent } from './views/add-dealership/add-dealership.component';
+import { FormGridComponent } from './components/form-grid/form-grid.component';
+import { SearchFormComponent } from './components/search-form/search-form.component';
 
 
 
@@ -42,7 +44,9 @@ import { AddDealershipComponent } from './views/add-dealership/add-dealership.co
     ResetComponent,
     NotificationComponent,
     AddAdminDialogComponent,
-    AddDealershipComponent
+    AddDealershipComponent,
+    FormGridComponent,
+    SearchFormComponent
 
   ],
   imports: [
