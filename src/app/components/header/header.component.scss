@@ -1,8 +1,34 @@
 .spacer {
-    flex: 1 1 auto;
-  }
-  .position-fixed{
-    position: fixed
-  }
+  flex: 1 1 auto;
+}
+
+.gap {
+  padding-left: 10px;
+}
+
+.mat-toolbar  {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.align.a {
+  vertical-align: text-top;
+  color:black;
+}
+
+.align.b {
+  vertical-align: text-bottom;
+}
+
+.position-fixed{
+  position: fixed
+}
+
+.grey-icon {
+  color: rgb(59, 59, 59);
+}
 
 

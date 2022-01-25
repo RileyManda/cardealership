@@ -18,8 +18,9 @@ import { MaterialModule } from './material-module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UsertableComponent } from './components/usertable/usertable.component';
 import { ResetComponent } from './views/reset/reset.component';
-import { AddDealershipComponent } from './components/add-dealership/add-dealership.component';
 import { NotificationComponent } from './components/notification/notification.component';
+import { AddAdminDialogComponent } from './components/add-admin-dialog/add-admin-dialog.component';
+import { AddDealershipComponent } from './views/add-dealership/add-dealership.component';
 
 
 
@@ -39,8 +40,9 @@ import { NotificationComponent } from './components/notification/notification.co
     DashboardComponent,
     UsertableComponent,
     ResetComponent,
-    AddDealershipComponent,
     NotificationComponent,
+    AddAdminDialogComponent,
+    AddDealershipComponent
 
   ],
   imports: [

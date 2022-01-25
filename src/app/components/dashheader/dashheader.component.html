@@ -14,14 +14,14 @@
 </a>
   <mat-menu #menu="matMenu">
     <button mat-menu-item>Change Password</button>
-    <button mat-menu-item>Add Systems Administrator</button>
+    <button mat-menu-item (click)="openDialog()">Add Systems Administrator</button>
     <button mat-menu-item>Manage Systems Administrator</button>
     <button mat-menu-item>Manage Vehicle Make</button>
     <button mat-menu-item>Main Menu</button>
     <button mat-menu-item routerLink="/login">LogOut</button>
   </mat-menu>
   <mat-menu #moreitems="matMenu">
-    <button mat-menu-item>Item1</button>
-    <button mat-menu-item>Item2</button>
+    <button mat-menu-item>Profile</button>
+    <button mat-menu-item>Settings</button>
   </mat-menu>
 </mat-toolbar>

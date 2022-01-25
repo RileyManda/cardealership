@@ -6,6 +6,9 @@ import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
 import { DashboardComponent } from './views/dashboard/dashboard.component';
 import { ResetComponent } from './views/reset/reset.component';
+import { AddDealershipComponent } from './views/add-dealership/add-dealership.component';
+
+
 
 
 // routes
@@ -15,6 +18,8 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'reset', component: ResetComponent },
   { path: 'dashboard', component: DashboardComponent },
+  { path: 'add-dealership', component: AddDealershipComponent },
+
 ];
 
 @NgModule({

@@ -97,7 +97,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     ScrollingModule,
     MatSlideToggleModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
   ]
 })
 export class MaterialModule {}

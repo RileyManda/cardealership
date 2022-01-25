@@ -1,12 +1,12 @@
-<mat-toolbar color="warn" class="position-fixed">
-    <img src="assets/app_logo.png" />
-    <span>OffTheBlock</span>
-    <span class="spacer"></span>
+<mat-toolbar [ngStyle]="{'color':'white'}">
+  <img src="assets/app_logo.png" />
+  <span class="gap"></span>
+  <span class="spacer"></span>
         <a mat-button>Home</a>
         <a mat-button>About</a>
         <a mat-button>Partners</a>
         <a mat-button>Contact</a>
-    <a mat-icon-button aria-label="signin" routerLink="/login" >
-        <mat-icon>account_circle</mat-icon>
-    </a>
+  <a mat-icon-button aria-label="signin">
+      <mat-icon class="grey-icon" routerLink='./login'>account_circle</mat-icon>
+  </a>
 </mat-toolbar>

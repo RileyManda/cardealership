@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { AddAdminDialogComponent } from 'src/app/components/add-admin-dialog/add-admin-dialog.component';
+import {MatDialog} from '@angular/material/dialog';
 @Component({
   selector: 'app-dashheader',
   templateUrl: './dashheader.component.html',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashheaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialog: MatDialog) {}
+
+  openDialog() {
+    this.dialog.open(AddAdminDialogComponent);
+  }
 
   ngOnInit(): void {
   }
