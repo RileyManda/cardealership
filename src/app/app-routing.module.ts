@@ -7,6 +7,8 @@ import { RegisterComponent } from './views/register/register.component';
 import { ResetComponent } from './views/reset/reset.component';
 import { AddDealershipComponent } from './views/add-dealership/add-dealership.component';
 import { DashboardComponent } from './views/dashboard/dashboard.component';
+import { ChangepasswordComponent } from './views/changepassword/changepassword.component';
+import { OtpScreenComponent } from './views/otp-screen/otp-screen.component';
 
 
 
@@ -17,8 +19,11 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'reset', component: ResetComponent },
+  { path: 'change-password', component: ChangepasswordComponent },
+  { path: 'otp-screen', component: OtpScreenComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'add-dealership', component: AddDealershipComponent },
+
 
 ];
 

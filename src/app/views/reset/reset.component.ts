@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./reset.component.scss']
 })
 export class ResetComponent implements OnInit {
-
+  hide = true;
   constructor() { }
 
   ngOnInit(): void {

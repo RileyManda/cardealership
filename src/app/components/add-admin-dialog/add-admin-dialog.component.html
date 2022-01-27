@@ -1,17 +1,26 @@
 <p>Add Systems Administrator</p>
 <div class="example-container">
   <mat-form-field appearance="fill">
-    <mat-label>FirstName</mat-label>
+    <mat-label>Dealership Name</mat-label>
     <input matInput #input maxlength="10" placeholder="FirstName">
     <mat-hint align ="end">{{input.value?.length || 0}}/10</mat-hint>
-  </mat-form-field>
+  </mat-form-field><br>
+  <p>Administer Affiliated Dealerships?</p>
+  <mat-radio-group >
+    <mat-radio-button class="example-margin" value="after">Yes</mat-radio-button>
+    <mat-radio-button class="example-margin" value="before">No</mat-radio-button>
+  </mat-radio-group><br><br>
   <mat-form-field appearance="fill">
-    <mat-label>LastName</mat-label>
+    <mat-label>Administrator Name</mat-label>
     <input matInput #input maxlength="10" placeholder="LastName">
     <mat-hint align ="end">{{input.value?.length || 0}}/10</mat-hint>
   </mat-form-field><br>
   <mat-form-field  appearance="fill">
     <mat-label>Email</mat-label>
+    <input matInput #input placeholder="Email">
+  </mat-form-field><br>
+  <mat-form-field  appearance="fill">
+    <mat-label>Cell</mat-label>
     <input matInput #input placeholder="Email">
   </mat-form-field>
   <section class="example-section">

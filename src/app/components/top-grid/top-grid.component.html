@@ -78,10 +78,7 @@
   </mat-grid-tile>
   <!--Add Sales Hours---------------------------------------------------->
   <mat-grid-tile>
-    <mat-form-field appearance="outline">
-      <mat-label>Closed</mat-label>
-      <input matInput />
-    </mat-form-field>
+    <app-sales-hours></app-sales-hours>
   </mat-grid-tile>
 </mat-grid-list>
 
@@ -118,10 +115,8 @@
   </mat-grid-tile>
   <!--Add Sales Hours---------------------------------------------------->
   <mat-grid-tile>
-    <mat-form-field appearance="outline">
-      <mat-label>Closed</mat-label>
-      <input matInput />
-    </mat-form-field>
+    <p>Status</p>
+
   </mat-grid-tile>
 </mat-grid-list>
 
@@ -155,10 +150,8 @@
   </mat-grid-tile>
   <!--Add Sales Hours---------------------------------------------------->
   <mat-grid-tile>
-    <mat-form-field appearance="outline">
-      <mat-label>Closed</mat-label>
-      <input matInput />
-    </mat-form-field>
+    <!--Active InActive ---------------------------------------------------->
+    <app-admin-checkboxes></app-admin-checkboxes>
   </mat-grid-tile>
 </mat-grid-list>
 
@@ -206,10 +199,7 @@
   </mat-grid-tile>
   <!--Affiliated Search---------------------------------------------------->
   <mat-grid-tile>
-      <mat-form-field appearance="outline">
-        <mat-label>Closed</mat-label>
-        <input matInput />
-      </mat-form-field>
+    <button mat-raised-button color="primary">Update Details</button>
     </mat-grid-tile>
 </mat-grid-list>
 
@@ -252,12 +242,7 @@
   </mat-grid-tile>
 
   <!--Affiliated Search---------------------------------------------------->
-  <mat-grid-tile>
-      <mat-form-field appearance="outline">
-        <mat-label>Closed</mat-label>
-        <input matInput />
-      </mat-form-field>
-    </mat-grid-tile>
+
 </mat-grid-list>
 
 
@@ -273,6 +258,7 @@
     <p>Email Address</p>
   </mat-grid-tile>
   <mat-grid-tile>
+
   </mat-grid-tile>
 
     <!--Searc City-------------------------------------------------- -->
@@ -293,11 +279,9 @@
       <input matInput />
     </mat-form-field>
   </mat-grid-tile>
+  <!--Check Boxes ---------------------------------------------------->
+  <!--Update Details---------------------------------------------------->
 
-  <!--Affiliated Search---------------------------------------------------->
-  <mat-grid-tile>
-    <button mat-raised-button color="primary">Update Details</button>
-    </mat-grid-tile>
 </mat-grid-list>
 
 
@@ -336,8 +320,13 @@
     </mat-form-field>
   </mat-grid-tile>
     <!--Email Address---------------------------------------------------->
-    <mat-grid-tile>
-    </mat-grid-tile>
+
+      <mat-grid-tile>
+
+
+        </mat-grid-tile>
+
+
   <!--Dealership Name-------------------------------------------------- -->
 </mat-grid-list>
 

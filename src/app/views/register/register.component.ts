@@ -7,7 +7,7 @@ import { MatInputModule } from '@angular/material/input';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
-
+  hide = true;
   constructor() { }
 
   ngOnInit(): void {

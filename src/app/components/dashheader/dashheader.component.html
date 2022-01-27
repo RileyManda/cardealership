@@ -13,11 +13,11 @@
     <mat-icon class="grey-icon">more_vert</mat-icon>
 </a>
   <mat-menu #menu="matMenu">
-    <button mat-menu-item>Change Password</button>
+    <button mat-menu-item routerLink="/change-password">Change Password</button>
     <button mat-menu-item (click)="openDialog()">Add Systems Administrator</button>
     <button mat-menu-item>Manage Systems Administrator</button>
     <button mat-menu-item>Manage Vehicle Make</button>
-    <button mat-menu-item>Main Menu</button>
+    <button mat-menu-item routerLink="/dashboard">Main Menu</button>
     <button mat-menu-item routerLink="/login">LogOut</button>
   </mat-menu>
   <mat-menu #moreitems="matMenu">

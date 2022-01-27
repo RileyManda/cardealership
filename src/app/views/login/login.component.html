@@ -1,31 +1,37 @@
 <div class="register-photo">
   <div class="form-container">
-      <form>
-        <p>Welcome</p>
-          <h2 class="text-center"><strong>Sign into your account</strong></h2>
+    <form>
+      <p>Welcome</p>
+      <h2 class="text-center"><strong>Sign into your account</strong></h2>
 
-          <div class="validation-error">Invalid Username or Password</div> <!-- Error Message Component to Come Here -->
+      <!-- <div class="validation-error">Invalid Username or Password</div> -->
+      <!-- Error Message Component to Come Here -->
 
-          <mat-form-field appearance="fill">
-            <mat-label>Email</mat-label>
-            <input matInput placeholder="Email">
-            <mat-icon matSuffix>email</mat-icon>
-          </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="Email" />
+        <mat-icon matSuffix>email</mat-icon>
+      </mat-form-field>
 
-          <mat-form-field appearance="fill">
-            <mat-label>Password</mat-label>
-            <input matInput placeholder="Password" type="password" >
-            <mat-icon matSuffix>visibility</mat-icon>
-            <!--
-            <input matInput placeholder="Password" [type]="hide ? 'password' : 'text'" formControlName="password" required>
-            <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-            -->
-          </mat-form-field><br>
-          <mat-checkbox class="">Remember me</mat-checkbox><br><br>
-          <mat-checkbox class="">Forgot Password</mat-checkbox><br><br>
-          <button mat-raised-button color="primary" routerLink="/dashboard">Sign In</button><br><br>
-          <p class="member-link">Not already a member? <a mat-button routerLink="/register" color="primary"> Sign Up</a></p>
-      </form>
-       <div class="image-holder"></div>
+      <mat-form-field appearance="fill">
+        <mat-label>Password</mat-label>
+        <input matInput placeholder="Password" type="password" [type]="hide ? 'password' : 'text'" />
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+        </mat-form-field>
+
+        <br />
+      <mat-checkbox class="">Remember me</mat-checkbox><br /><br />
+      <button mat-button routerLink="/reset">Forgot Password</button>
+      <button mat-raised-button class="allbuttons" routerLink="/dashboard">
+        Sign In</button
+      ><br /><br />
+      <p class="member-link">
+        Not already a member?
+        <a mat-button routerLink="/register"> Sign Up</a>
+      </p>
+    </form>
+    <div class="image-holder"></div>
   </div>
 </div>

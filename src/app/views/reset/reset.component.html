@@ -1,22 +1,24 @@
 <div class="register-photo">
   <div class="form-container">
-      <form>
-          <h2 class="text-center"><strong>Account sign up</strong></h2>
+    <form>
+      <h2 class="text-center"><strong>Forgot your password?</strong></h2>
+      <p>Please enter your email address and we will help you to reset your password using your verification code.</p>
+      <mat-form-field appearance="fill">
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="Email" />
+        <mat-icon matSuffix>email</mat-icon>
+      </mat-form-field>
+      <button mat-raised-button class="allbuttons" routerLink="/otp-screen">
+        Reset Password</button>
+        <br />
+        <p class="member-link">
+          Remembered your password? Return to
+          <a mat-button routerLink="/login"> Sign In</a>
+        </p>
 
-          <mat-form-field appearance="fill">
-            <mat-label>Email</mat-label>
-            <input matInput placeholder="Email">
-            <mat-icon matSuffix>email</mat-icon>
-          </mat-form-field>
 
-          <mat-form-field appearance="fill">
-            <mat-label>Password</mat-label>
-            <input matInput placeholder="Password">
-            <mat-icon matSuffix>visibility</mat-icon>
-          </mat-form-field><br>
-          <button mat-raised-button color="primary" routerLink="/signin" color="primary">Sign Up</button><br><br>
-          <p class="member-link">Already have an account <a mat-button routerLink="/login"> Sign In</a></p>
-      </form>
-       <div class="image-holder"></div>
+      <br /><br />
+    </form>
+    <div class="image-holder"></div>
   </div>
 </div>

@@ -1,8 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import {ThemePalette} from '@angular/material/core';
+import { MatIconModule } from '@angular/material/icon';
+
+
 export interface ChipColor {
   name: string;
-  color: ThemePalette;
+
+
 }
 @Component({
   selector: 'app-sales-hours',
@@ -12,11 +16,9 @@ export interface ChipColor {
 export class SalesHoursComponent implements OnInit {
 
   constructor() { }
-  availableColors: ChipColor[] = [
-    {name: 'Closed', color: undefined},
-    {name: 'Closed', color: 'primary'},
-    {name: 'Closed', color: 'accent'},
-    {name: 'Closed', color: 'warn'},
+  chips: ChipColor[] = [
+
+    {name: 'Closed'}
   ];
   ngOnInit(): void {
   }
