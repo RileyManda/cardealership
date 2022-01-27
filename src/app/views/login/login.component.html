@@ -15,21 +15,36 @@
 
       <mat-form-field appearance="fill">
         <mat-label>Password</mat-label>
-        <input matInput placeholder="Password" type="password" [type]="hide ? 'password' : 'text'" />
-        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        <input
+          matInput
+          placeholder="Password"
+          type="password"
+          [type]="hide ? 'password' : 'text'"
+        />
+        <button
+          mat-icon-button
+          matSuffix
+          (click)="hide = !hide"
+          [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hide"
+        >
+          <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
         </button>
-        </mat-form-field>
+      </mat-form-field>
 
-        <br />
+      <br />
+
       <mat-checkbox class="">Remember me</mat-checkbox><br /><br />
-      <button mat-button routerLink="/reset">Forgot Password</button>
       <button mat-raised-button class="allbuttons" routerLink="/dashboard">
         Sign In</button
       ><br /><br />
       <p class="member-link">
         Not already a member?
         <a mat-button routerLink="/register"> Sign Up</a>
+      </p>
+      <p class="member-link">
+        Forgot password
+        <a mat-button routerLink="/reset">Reset</a>
       </p>
     </form>
     <div class="image-holder"></div>
