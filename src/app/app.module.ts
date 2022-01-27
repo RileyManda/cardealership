@@ -25,6 +25,18 @@ import { FormGridComponent } from './components/form-grid/form-grid.component';
 import { SearchFormComponent } from './components/search-form/search-form.component';
 import { AdminCheckboxesComponent } from './components/admin-checkboxes/admin-checkboxes.component';
 import { AddChipComponent } from './components/add-chip/add-chip.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { LayoutModule } from '@angular/cdk/layout';
+import { DashComponent } from './views/dash/dash.component';
+import { UploadFileComponent } from './components/upload-file/upload-file.component';
+import { DealershipPrinscipleComponent } from './components/dealership-prinsciple/dealership-prinsciple.component';
+import { TopGridComponent } from './components/top-grid/top-grid.component';
+import { BottomGridComponent } from './components/bottom-grid/bottom-grid.component';
+import { MidGridComponent } from './components/mid-grid/mid-grid.component';
+import { SalesHoursComponent } from './components/sales-hours/sales-hours.component';
 
 
 
@@ -50,14 +62,27 @@ import { AddChipComponent } from './components/add-chip/add-chip.component';
     FormGridComponent,
     SearchFormComponent,
     AdminCheckboxesComponent,
-    AddChipComponent
+    AddChipComponent,
+    DashComponent,
+    UploadFileComponent,
+    DealershipPrinscipleComponent,
+    TopGridComponent,
+    BottomGridComponent,
+    MidGridComponent,
+    SalesHoursComponent
 
   ],
   imports: [
     AppRoutingModule,
     MaterialModule,
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatGridListModule,
+    MatCardModule,
+    MatMenuModule,
+    MatIconModule,
+    MatButtonModule,
+    LayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

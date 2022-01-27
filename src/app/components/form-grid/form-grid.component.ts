@@ -1,9 +1,16 @@
 import { Component, OnInit ,ViewChild, ElementRef } from '@angular/core';
-import {FormControl} from '@angular/forms';
+import {FormControl,FormGroupDirective, NgForm, Validators} from '@angular/forms';
 import {Observable} from 'rxjs';
 import {map, startWith} from 'rxjs/operators';
+import {ErrorStateMatcher} from '@angular/material/core';
 
-
+/** Error when invalid control is dirty, touched, or submitted. */
+export class MyErrorStateMatcher implements ErrorStateMatcher {
+  isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
+    const isSubmitted = form && form.submitted;
+    return !!(control && control.invalid && (control.dirty || control.touched || isSubmitted));
+  }
+}
 @Component({
   selector: 'app-form-grid',
   templateUrl: './form-grid.component.html',
@@ -37,7 +44,7 @@ export class FormGridComponent implements OnInit {
   uploadFileEvt(imgFile: any) {
     if (imgFile.target.files && imgFile.target.files[0]) {
       this.fileAttr = '';
- 
+
 
       // HTML5 FileReader API
       let reader = new FileReader();
@@ -57,4 +64,10 @@ export class FormGridComponent implements OnInit {
     }
   }
 
+  emailFormControl = new FormControl('', [Validators.required, Validators.email]);
+
+  matcher = new MyErrorStateMatcher();
+
 }
+
+

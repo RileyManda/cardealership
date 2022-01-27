@@ -4,9 +4,9 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './views/home/home.component';
 import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
-import { DashboardComponent } from './views/dashboard/dashboard.component';
 import { ResetComponent } from './views/reset/reset.component';
 import { AddDealershipComponent } from './views/add-dealership/add-dealership.component';
+import { DashboardComponent } from './views/dashboard/dashboard.component';
 
 
 
