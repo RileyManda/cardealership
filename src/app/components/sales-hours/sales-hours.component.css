@@ -1,3 +1,17 @@
 mat-chip {
   max-width: 200px;
 }
+.height100p {
+  height: 100%;
+}
+.mat-grid-tile-custom {
+  overflow: visible!important;
+}
+
+.custom-mat-list {
+  padding-top: 50%!important;
+}
+
+.mat-grid-tile-custom .mat-figure {
+  align-items: unset!important;
+}

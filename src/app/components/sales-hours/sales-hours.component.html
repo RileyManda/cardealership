@@ -1,6 +1,7 @@
-<mat-chip-list class="mat-chip-list-stacked" aria-label="Color selection">
-  <mat-chip *ngFor="let chip of chips">
-    {{chip.name}}
-  </mat-chip>
-</mat-chip-list>
-<!-- level 1 -->
+<mat-list>
+  <mat-list-item *ngFor="let user of closed">
+    <button mat-raised-button color="warn">
+    {{user}}
+</button>
+  </mat-list-item>
+</mat-list>
