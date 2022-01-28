@@ -7,74 +7,26 @@ import {SelectionModel} from '@angular/cdk/collections';
 export interface UserData {
   id: number;
   name: string;
-  administrator: string;
   action: string;
 }
 /** Constants used to fill up our data base. */
 const ELEMENT_DATA: UserData[] = [
-  {id :1,name: 'Maia',administrator: 'John',action: '+'},
-  {id :1, name: 'Olivia',administrator: 'Asher',action: '+'},
+  {id :1,name: 'Rob',action: '+'},
 ];
 
-const Dealership: string[] = [
-  'Maia',
-  'Asher',
-  'Olivia',
-  'Atticus',
-  'Amelia',
-  'Jack',
-  'Charlotte',
-  'Theodore',
-  'Isla',
-  'Oliver',
-  'Isabella',
-  'Jasper',
-  'Cora',
-  'Levi',
-  'Violet',
-  'Arthur',
-  'Mia',
-  'Thomas',
-  'Elizabeth',
-];
 const DealershipName: string[] = [
   'MiaA',
-  'Asher',
-  'Olivia',
-  'Atticus',
-  'Amelia',
-  'Jack',
-  'Charlotte',
-  'Theodore',
-  'Isla',
-  'Oliver',
-  'Isabella',
-  'Jasper',
-  'Cora',
-  'Levi',
-  'Violet',
-  'Arthur',
-  'Mia',
-  'Thomas',
   'Elizabeth',
 ];
 const Administrator: string[] = [
   'blueberry',
   'lychee',
-  'kiwi',
-  'mango',
-  'peach',
-  'lime',
-  'pomegranate',
-  'pineapple',
 ];
 
 
 const Action: string[] = [
   'Maia',
   'Asher',
-  'Olivia',
-  'Atticus',
 ];
 @Component({
   selector: 'app-admin-table',
@@ -82,7 +34,7 @@ const Action: string[] = [
   styleUrls: ['./admin-table.component.scss']
 })
 export class AdminTableComponent  implements AfterViewInit  {
-  displayedColumns: string[] = ['select','id','name','administrator','action'];
+  displayedColumns: string[] = ['select','id','name','action'];
   dataSource= new MatTableDataSource<UserData>(ELEMENT_DATA);
   selection = new SelectionModel<UserData>(true, []);
   @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -135,12 +87,6 @@ export class AdminTableComponent  implements AfterViewInit  {
 /** Builds and returns a new User. */
 function createNewUser(id: number): UserData {
 
-  const dealership =
-  Dealership[Math.round(Math.random() * (Dealership.length - 1))] +
-  ' ' +
-  Dealership[Math.round(Math.random() * (Dealership.length - 1))].charAt(0) +
-  '.';
-
   const name =
     DealershipName[Math.round(Math.random() * (DealershipName.length - 1))] +
     ' ' +
@@ -162,8 +108,7 @@ function createNewUser(id: number): UserData {
 
   return {
     id: id,
-    name: name,
-    administrator: Administrator[Math.round(Math.random() * (Administrator.length - 1))],
+    name: Administrator[Math.round(Math.random() * (Administrator.length - 1))],
     action: action,
   };
 }

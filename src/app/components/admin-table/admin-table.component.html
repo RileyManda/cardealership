@@ -8,6 +8,8 @@
        aria-label="Search" #input>
     </mat-form-field>
   </form>
+
+<app-table-admin-buttons></app-table-admin-buttons>
 </div>
 
 
@@ -38,23 +40,14 @@
     </ng-container>
 
 
-
-    <!-- Name Column -->
-    <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header> Dealership Name </th>
-      <td mat-cell *matCellDef="let row">
-        {{row.name}}
-       </td>
-    </ng-container>
-
     <!-- Administrator Column -->
-    <ng-container matColumnDef="administrator">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header> Systems Administrator </th>
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Administrator </th>
       <td mat-cell *matCellDef="let row">
         <mat-chip
         onClick={handleClick}
         icon={icon}>
-        {{row.administrator}}
+        {{row.name}}
         </mat-chip>
 
 
