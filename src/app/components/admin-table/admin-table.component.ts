@@ -19,8 +19,8 @@ const DealershipName: string[] = [
   'Elizabeth',
 ];
 const Administrator: string[] = [
-  'blueberry',
-  'lychee',
+  'James',
+  'Timothy',
 ];
 
 

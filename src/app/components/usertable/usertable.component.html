@@ -9,7 +9,17 @@
     </mat-form-field>
   </form>
 
-<app-table-admin-buttons></app-table-admin-buttons>
+  <div class="example-button-row">
+    <button mat-raised-button [matMenuTriggerFor]="bulkaction"><mat-icon>keyboard_arrow_down</mat-icon> Bulk Actions</button>
+    <button mat-raised-button routerLink="/add-dealership">Add Dealerships</button>
+    <button mat-raised-button>Filters</button>
+
+  </div>
+
+  <mat-menu #bulkaction="matMenu">
+    <button mat-menu-item>Export To Csv</button>
+    <button mat-menu-item>Export To Pdf</button>
+  </mat-menu>
 </div>
 
 

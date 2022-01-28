@@ -1,5 +1,5 @@
 body {
-  overflow-y: hidden;
+
 }
 
 .content {
@@ -8,6 +8,7 @@ body {
   max-width: 100%;
   width: 1024px;
   margin: 0 auto;
+  padding-top: 2%;
 
 }
 table {
