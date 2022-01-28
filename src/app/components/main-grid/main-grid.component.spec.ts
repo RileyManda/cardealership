@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MidGridComponent } from './mid-grid.component';
+import { MainGridComponent } from './main-grid.component';
 
-describe('MidGridComponent', () => {
-  let component: MidGridComponent;
-  let fixture: ComponentFixture<MidGridComponent>;
+describe('MainGridComponent', () => {
+  let component: MainGridComponent;
+  let fixture: ComponentFixture<MainGridComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MidGridComponent ]
+      declarations: [ MainGridComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MidGridComponent);
+    fixture = TestBed.createComponent(MainGridComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -35,12 +35,13 @@ import { UploadFileComponent } from './components/upload-file/upload-file.compon
 import { DealershipPrinscipleComponent } from './components/dealership-prinsciple/dealership-prinsciple.component';
 import { TopGridComponent } from './components/top-grid/top-grid.component';
 import { BottomGridComponent } from './components/bottom-grid/bottom-grid.component';
-import { MidGridComponent } from './components/mid-grid/mid-grid.component';
+
 import { SalesHoursComponent } from './components/sales-hours/sales-hours.component';
 import { ChangepasswordComponent } from './views/changepassword/changepassword.component';
 import { OtpScreenComponent } from './views/otp-screen/otp-screen.component';
 import { ModuleCheckboxesComponent } from './components/module-checkboxes/module-checkboxes.component';
 import { ManageVehicleMakesComponent } from './views/manage-vehicle-makes/manage-vehicle-makes.component';
+import { MainGridComponent } from './components/main-grid/main-grid.component';
 
 
 
@@ -72,7 +73,7 @@ import { ManageVehicleMakesComponent } from './views/manage-vehicle-makes/manage
     DealershipPrinscipleComponent,
     TopGridComponent,
     BottomGridComponent,
-    MidGridComponent,
+    MainGridComponent,
     SalesHoursComponent,
     ChangepasswordComponent,
     OtpScreenComponent,
