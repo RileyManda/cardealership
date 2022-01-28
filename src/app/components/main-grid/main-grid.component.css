@@ -1,4 +1,4 @@
-.example-form {
+.main-form {
   min-width: 150px;
   max-width: 500px;
   width: 100%;
@@ -10,6 +10,11 @@
 .container .mat-form-field + .mat-form-field {
   margin-left: 8px;
 }
-.example-container .mat-form-field + .mat-form-field {
+.main-container .mat-form-field + .mat-form-field {
   margin-left: 8px;
+}
+.allbuttons {
+  color: #ffffff;
+  background-color: #25b34f;
+  min-width: unset!important;
 }

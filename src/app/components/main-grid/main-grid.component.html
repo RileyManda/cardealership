@@ -80,8 +80,7 @@
     </mat-list>
   </mat-grid-tile>
 
-  <mat-grid-tile colspan="2" rowspan="5" [style.background]="'grey'">
-    <!--Dealership Name-------------------------------------------------- -->
+  <mat-grid-tile colspan="2" rowspan="5">
     <mat-list role="list">
       <mat-list-item role="listitem">
         <mat-form-field  appearance="outline">
@@ -151,7 +150,6 @@
   </mat-grid-tile>
 
   <mat-grid-tile
-    [style.background]="'grey'"
     colspan="1"
     rowspan="1"
     rowHeight="1"
@@ -165,7 +163,6 @@
 
   <!-- // bottom grid -->
   <mat-grid-tile
-    [style.background]="'grey'"
     colspan="1"
     rowspan="6"
     rowHeight="1">
@@ -175,12 +172,11 @@
     <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
 
     <mat-list-item role="listitem">
-      <p>Status</p>
+
      <app-admin-checkboxes></app-admin-checkboxes>
     </mat-list-item><br /> <br />
     <mat-list-item role="listitem">
-
-     <button mat-raised-button color="primary">Update Details</button>
+     <button mat-raised-button class="allbuttons">Update Details</button>
     </mat-list-item>
   </mat-list>
   </mat-grid-tile>
