@@ -4,8 +4,7 @@
   rowspan="1"
   gutterSize="2px"
   rowHeight="100px"
-  fxLayout="row"
->
+  fxLayout="row">
   <mat-grid-tile colspan="2" rowspan="6" [style.background]="'grey'">
     <mat-list role="list">
       <mat-list-item role="listitem">
@@ -17,7 +16,7 @@
 
       <mat-list-item role="listitem">
         <button mat-raised-button>Upload</button>
-        <mat-form-field class="example-full-width" appearance="outline">
+        <mat-form-field  appearance="outline">
           <mat-label>Dealership Logo</mat-label>
           <input matInput />
         </mat-form-field> </mat-list-item
@@ -81,17 +80,17 @@
     </mat-list>
   </mat-grid-tile>
 
-  <mat-grid-tile colspan="2" rowspan="3" [style.background]="'grey'">
+  <mat-grid-tile colspan="2" rowspan="5" [style.background]="'grey'">
     <!--Dealership Name-------------------------------------------------- -->
     <mat-list role="list">
       <mat-list-item role="listitem">
-        <mat-form-field class="example-full-width" appearance="outline">
-          <mat-label>Affialiated Dealerships</mat-label>
+        <mat-form-field  appearance="outline">
+          <mat-label>First Name</mat-label>
           <input matInput />
         </mat-form-field>
 
-        <mat-form-field class="example-full-width" appearance="outline">
-          <mat-label>Affialiated </mat-label>
+        <mat-form-field  appearance="outline">
+          <mat-label>Last Name </mat-label>
           <input matInput />
         </mat-form-field>
          </mat-list-item
@@ -99,7 +98,7 @@
 
       <mat-list-item role="listitem">
         <mat-form-field class="example-full-width" appearance="outline">
-          <mat-label>Affialiated Dealerships</mat-label>
+          <mat-label>Cell#</mat-label>
           <input matInput />
         </mat-form-field>
 
@@ -108,26 +107,45 @@
 
       <mat-list-item role="listitem">
         <mat-form-field class="example-full-width" appearance="outline">
-          <mat-label>Affialiated Dealerships</mat-label>
+          <mat-label>Email Address</mat-label>
+          <input matInput />
+          <mat-divider></mat-divider>
+        </mat-form-field>
+
+
+      </mat-list-item>   <br />
+      <mat-list-item role="listitem">
+
+        <p>Alternate Contact</p>
+      </mat-list-item>   <br />
+
+
+      <mat-list-item role="listitem">
+        <mat-form-field class="example-full-width" appearance="outline">
+          <mat-label>First Name</mat-label>
           <input matInput />
         </mat-form-field>
 
         <mat-form-field class="example-full-width" appearance="outline">
-          <mat-label>Affialiated </mat-label>
+          <mat-label>Last Name </mat-label>
           <input matInput /> </mat-form-field
         >
       </mat-list-item> <br />
 
       <mat-list-item role="listitem">
         <mat-form-field class="example-full-width" appearance="outline">
-          <mat-label>Affialiated Dealerships</mat-label>
+          <mat-label>Cell#</mat-label>
           <input matInput />
         </mat-form-field>
 
+      </mat-list-item>   <br />
+
+      <mat-list-item role="listitem">
         <mat-form-field class="example-full-width" appearance="outline">
-          <mat-label>Affialiated </mat-label>
-          <input matInput /> </mat-form-field
-        ><br />
+          <mat-label>Email Address</mat-label>
+          <input matInput />
+        </mat-form-field>
+        <br />
       </mat-list-item>
     </mat-list>
   </mat-grid-tile>
@@ -145,12 +163,26 @@
     </mat-form-field>
   </mat-grid-tile>
 
+  <!-- // bottom grid -->
   <mat-grid-tile
     [style.background]="'grey'"
     colspan="1"
-    rowspan="3"
-    rowHeight="1"
-  >
-    <app-sales-hours></app-sales-hours>
+    rowspan="6"
+    rowHeight="1">
+  <mat-list role="list">
+    <mat-list-item role="listitem">
+     <app-sales-hours></app-sales-hours></mat-list-item>
+    <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
+
+    <mat-list-item role="listitem">
+      <p>Status</p>
+     <app-admin-checkboxes></app-admin-checkboxes>
+    </mat-list-item><br /> <br />
+    <mat-list-item role="listitem">
+
+     <button mat-raised-button color="primary">Update Details</button>
+    </mat-list-item>
+  </mat-list>
   </mat-grid-tile>
+
 </mat-grid-list>
