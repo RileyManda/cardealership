@@ -42,6 +42,9 @@ import { OtpScreenComponent } from './views/otp-screen/otp-screen.component';
 import { ModuleCheckboxesComponent } from './components/module-checkboxes/module-checkboxes.component';
 import { ManageVehicleMakesComponent } from './views/manage-vehicle-makes/manage-vehicle-makes.component';
 import { MainGridComponent } from './components/main-grid/main-grid.component';
+import { ManageSystemsAdminsComponent } from './views/manage-systems-admins/manage-systems-admins.component';
+import { TableAdminButtonsComponent } from './components/table-admin-buttons/table-admin-buttons.component';
+import { AdminTableComponent } from './components/admin-table/admin-table.component';
 
 
 
@@ -78,7 +81,10 @@ import { MainGridComponent } from './components/main-grid/main-grid.component';
     ChangepasswordComponent,
     OtpScreenComponent,
     ModuleCheckboxesComponent,
-    ManageVehicleMakesComponent
+    ManageVehicleMakesComponent,
+    ManageSystemsAdminsComponent,
+    TableAdminButtonsComponent,
+    AdminTableComponent
 
   ],
   imports: [

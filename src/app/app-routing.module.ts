@@ -9,6 +9,7 @@ import { AddDealershipComponent } from './views/add-dealership/add-dealership.co
 import { DashboardComponent } from './views/dashboard/dashboard.component';
 import { ChangepasswordComponent } from './views/changepassword/changepassword.component';
 import { OtpScreenComponent } from './views/otp-screen/otp-screen.component';
+import { ManageSystemsAdminsComponent } from './views/manage-systems-admins/manage-systems-admins.component';
 
 
 
@@ -23,6 +24,7 @@ const routes: Routes = [
   { path: 'otp-screen', component: OtpScreenComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'add-dealership', component: AddDealershipComponent },
+  { path: 'manage-admin', component: ManageSystemsAdminsComponent },
 
 
 ];
