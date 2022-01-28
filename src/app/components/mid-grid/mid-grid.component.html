@@ -1,52 +1,84 @@
-
 <!-- level 2 -->
-<mat-grid-list cols="5" rowspan="5" rowHeight="3"gutterSize="2px" rowHeight="80px" fxLayout=row>
-  <mat-grid-tile colspan="2" rowspan="5" [style.background]="'grey'">
-    <mat-list role = "list">
-      <mat-list-item role = "listitem">
+<mat-grid-list
+  cols="5"
+  rowspan="1"
+  gutterSize="2px"
+  rowHeight="100px"
+  fxLayout="row"
+>
+  <mat-grid-tile colspan="2" rowspan="3" [style.background]="'grey'">
+    <mat-list role="list">
+      <mat-list-item role="listitem">
         <mat-form-field class="example-full-width" appearance="outline">
           <mat-label>Dealership Name</mat-label>
           <input matInput />
-        </mat-form-field>
-      </mat-list-item><br>
+        </mat-form-field> </mat-list-item
+      ><br />
 
       <p>Dealership Logo</p>
-        <mat-list-item role = "listitem">
-<button mat-raised-button>Upload</button>
-          <mat-form-field class="example-full-width" appearance="outline">
-            <input matInput />
-          </mat-form-field>
-        </mat-list-item><br>
-
-      <mat-list-item role = "listitem">
-
+      <mat-list-item role="listitem">
+        <button mat-raised-button>Upload</button>
         <mat-form-field class="example-full-width" appearance="outline">
           <input matInput />
-        </mat-form-field>
-      </mat-list-item><br>
-   </mat-list>
+        </mat-form-field> </mat-list-item
+      ><br />
+
+      <mat-list-item role="listitem">
+        <mat-form-field class="example-full-width" appearance="outline">
+          <input matInput />
+        </mat-form-field> </mat-list-item
+      ><br />
+    </mat-list>
   </mat-grid-tile>
-  <mat-grid-tile colspan="2" rowspan="5" [style.background]="'grey'" >
-  <!--Dealership Name-------------------------------------------------- -->
 
-    <mat-form-field appearance="outline">
-      <mat-label>First Name</mat-label>
+  <mat-grid-tile colspan="2" rowspan="2" [style.background]="'grey'">
+    <!--Dealership Name-------------------------------------------------- -->
+    <mat-list role="list">
+      <mat-list-item role="listitem">
+        <mat-form-field class="example-full-width" appearance="outline">
+          <mat-label>Affialiated Dealerships</mat-label>
+          <input matInput />
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="outline">
+          <mat-label>Affialiated </mat-label>
+          <input matInput />
+        </mat-form-field> </mat-list-item
+      ><br />
+
+      <mat-list-item role="listitem">
+        <mat-form-field class="example-full-width" appearance="outline">
+          <mat-label>Affialiated Dealerships</mat-label>
+          <input matInput />
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="outline">
+          <mat-label>Affialiated </mat-label>
+          <input matInput /> </mat-form-field
+        ><br />
+      </mat-list-item>
+    </mat-list>
+  </mat-grid-tile>
+
+  <mat-grid-tile
+    [style.background]="'grey'"
+    colspan="1"
+    rowspan="1"
+    rowHeight="1"
+  >
+    <mat-form-field class="example-full-width" appearance="outline">
+      <mat-icon matSuffix>search</mat-icon>
+      <mat-label>Affialiated Dealerships</mat-label>
       <input matInput />
-      <!-- <mat-hint [style.text-align]="'center'">Hint</mat-hint> -->
     </mat-form-field>
-  </mat-grid-tile >
+  </mat-grid-tile>
 
-    <mat-grid-tile [style.background]="'grey'" colspan="1" rowspan="2">
-      <mat-form-field class="example-full-width" appearance="outline">
-        <mat-icon matSuffix>search</mat-icon>
-        <mat-label>Affialiated Dealerships</mat-label>
-        <input matInput />
-      </mat-form-field>
-      </mat-grid-tile>
-      <mat-grid-tile [style.background]="'grey'" rowspan="5">
-        <app-sales-hours></app-sales-hours>
-
-        </mat-grid-tile>
-
-
+  <mat-grid-tile
+    [style.background]="'grey'"
+    colspan="1"
+    rowspan="3"
+    rowHeight="1"
+  >
+    <app-sales-hours></app-sales-hours>
+  </mat-grid-tile>
 </mat-grid-list>
