@@ -46,6 +46,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -100,6 +101,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatSlideToggleModule,
     MatFormFieldModule,
     MatInputModule,
+    HttpClientModule,
 
   ]
 })

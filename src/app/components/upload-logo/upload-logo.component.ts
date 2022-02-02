@@ -2,13 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { HttpEventType, HttpResponse } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { FileUploadService } from '../../services/upload-services/upload-service';
-
 @Component({
-  selector: 'app-maingrid',
-  templateUrl: './main-grid.component.html',
-  styleUrls: ['./main-grid.component.scss']
+  selector: 'app-upload-logo',
+  templateUrl: './upload-logo.component.html',
+  styleUrls: ['./upload-logo.component.css']
 })
-export class MainGridComponent implements OnInit {
+export class UploadLogoComponent implements OnInit {
+
   selectedFiles?: FileList;
   selectedFileNames: string[] = [];
 
@@ -83,3 +83,4 @@ export class MainGridComponent implements OnInit {
     }
   }
 }
+

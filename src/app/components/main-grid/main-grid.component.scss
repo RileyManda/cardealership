@@ -1,0 +1,50 @@
+.main-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.full-width {
+  width: 100%;
+}
+.container .mat-form-field + .mat-form-field {
+  margin-left: 8px;
+}
+.main-container .mat-form-field + .mat-form-field {
+  margin-left: 8px;
+}
+.allbuttons {
+  color: #ffffff;
+  background-color: #25b34f;
+  min-width: unset!important;
+}
+
+
+.myform-wrapper {
+  margin: 50px;
+  width: 350px;
+
+  .mat-form-field {
+      width: 100%;
+  }
+
+  .mat-toolbar-single-row {
+      height: auto !important;
+      background: transparent;
+
+      button {
+          width: 30%;
+      }
+  }
+}
+
+#fileUpload {
+  position: absolute;
+  z-index: 9;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  left: 0px;
+  top: 0px;
+  cursor: pointer;
+}

@@ -30,7 +30,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { LayoutModule } from '@angular/cdk/layout';
-import { DashComponent } from './views/dash/dash.component';
+
 import { UploadFileComponent } from './components/upload-file/upload-file.component';
 import { DealershipPrinscipleComponent } from './components/dealership-prinsciple/dealership-prinsciple.component';
 import { TopGridComponent } from './components/top-grid/top-grid.component';
@@ -45,6 +45,7 @@ import { MainGridComponent } from './components/main-grid/main-grid.component';
 import { ManageSystemsAdminsComponent } from './views/manage-systems-admins/manage-systems-admins.component';
 import { TableAdminButtonsComponent } from './components/table-admin-buttons/table-admin-buttons.component';
 import { AdminTableComponent } from './components/admin-table/admin-table.component';
+import { UploadLogoComponent } from './components/upload-logo/upload-logo.component';
 
 
 
@@ -71,7 +72,6 @@ import { AdminTableComponent } from './components/admin-table/admin-table.compon
     SearchFormComponent,
     AdminCheckboxesComponent,
     AddChipComponent,
-    DashComponent,
     UploadFileComponent,
     DealershipPrinscipleComponent,
     TopGridComponent,
@@ -84,7 +84,8 @@ import { AdminTableComponent } from './components/admin-table/admin-table.compon
     ManageVehicleMakesComponent,
     ManageSystemsAdminsComponent,
     TableAdminButtonsComponent,
-    AdminTableComponent
+    AdminTableComponent,
+    UploadLogoComponent
 
   ],
   imports: [

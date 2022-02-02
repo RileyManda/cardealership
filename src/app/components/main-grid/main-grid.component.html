@@ -3,8 +3,8 @@
   cols="5"
   rowspan="1"
   gutterSize="2px"
-  rowHeight="100px"
   fxLayout="row"
+  rowHeight="2:1"
 >
   <mat-grid-tile colspan="2" rowspan="6" [style.background]="'grey'">
     <mat-list role="list">
@@ -22,6 +22,8 @@
           <input matInput />
         </mat-form-field> </mat-list-item
       ><br />
+
+    <app-upload-logo></app-upload-logo>
 
       <mat-list-item role="listitem">
         <mat-form-field class="example-full-width" appearance="outline">
@@ -171,7 +173,9 @@
       ><br />
       <br />
       <mat-list-item role="listitem">
-        <button mat-raised-button class="allbuttons" routerLink="/dashboard">Update Details</button>
+        <button mat-raised-button class="allbuttons" routerLink="/dashboard">
+          Update Details
+        </button>
       </mat-list-item>
     </mat-list>
   </mat-grid-tile>
