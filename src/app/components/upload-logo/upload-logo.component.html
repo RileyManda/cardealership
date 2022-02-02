@@ -9,10 +9,13 @@
   </mat-toolbar>
 </div>
 
-<mat-form-field>
+<mat-form-field style="width: 400px">
   <div>
     <mat-toolbar>
-      <input matInput [value]="selectedFileNames.length ? selectedFileNames : 'Select Images'" />
+      <input
+        matInput
+        [value]="selectedFileNames.length ? selectedFileNames : 'Select Images'"
+      />
 
       <button
         mat-flat-button
@@ -28,14 +31,15 @@
       type="file"
       id="fileInput"
       name="fileInput"
-      accept="image/*" multiple
+      accept="image/*"
+      multiple
       (change)="selectFiles($event)"
     />
   </div>
 </mat-form-field>
 
 <div>
-  <img *ngFor='let preview of previews' [src]="preview" class="preview">
+  <img *ngFor="let preview of previews" [src]="preview" class="preview" />
 </div>
 
 <div *ngIf="message.length" class="message">
@@ -44,7 +48,7 @@
   </ul>
 </div>
 
-<mat-card class="list-card">
+<!-- <mat-card class="list-card">
   <mat-card-header>
     <mat-card-title>List of Images</mat-card-title>
   </mat-card-header>
@@ -56,4 +60,4 @@
       </mat-list-item>
     </mat-list>
   </mat-card-content>
-</mat-card>
+</mat-card> -->

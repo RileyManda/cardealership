@@ -3,8 +3,8 @@ import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
 import {SelectionModel} from '@angular/cdk/collections';
-
-
+import { EditAdminDialogComponent } from '../edit-admin-dialog/edit-admin-dialog.component';
+import {MatDialog} from '@angular/material/dialog';
 export interface UserData {
   id: number;
   dealership: string;
@@ -102,14 +102,16 @@ export class UsertableComponent implements AfterViewInit {
   @ViewChild(MatSort) sort: MatSort;
 
 
-  constructor() {
+  constructor(public dialog: MatDialog) {
     const users = Array.from({length: 100}, (_, k) => createNewUser(k + 1));
 
 
     // Assign the data to the data source for the table to render
     this.dataSource = new MatTableDataSource(users);
   }
-
+  openEditDialog() {
+    this.dialog.open(EditAdminDialogComponent);
+  }
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
@@ -182,6 +184,9 @@ function createNewUser(id: number): UserData {
     administrator: Administrator[Math.round(Math.random() * (Administrator.length - 1))],
     action: action,
   };
+
+
+
 }
 
 

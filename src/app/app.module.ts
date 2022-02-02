@@ -46,6 +46,8 @@ import { ManageSystemsAdminsComponent } from './views/manage-systems-admins/mana
 import { TableAdminButtonsComponent } from './components/table-admin-buttons/table-admin-buttons.component';
 import { AdminTableComponent } from './components/admin-table/admin-table.component';
 import { UploadLogoComponent } from './components/upload-logo/upload-logo.component';
+import { AvatarComponent } from './components/avatar/avatar.component';
+import { EditAdminDialogComponent } from './components/edit-admin-dialog/edit-admin-dialog.component';
 
 
 
@@ -85,7 +87,9 @@ import { UploadLogoComponent } from './components/upload-logo/upload-logo.compon
     ManageSystemsAdminsComponent,
     TableAdminButtonsComponent,
     AdminTableComponent,
-    UploadLogoComponent
+    UploadLogoComponent,
+    AvatarComponent,
+    EditAdminDialogComponent
 
   ],
   imports: [
