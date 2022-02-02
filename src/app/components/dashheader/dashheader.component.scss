@@ -33,3 +33,24 @@
 }
 
 
+.btnCircle {
+  border-radius: 50% ;
+  padding: 2vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10px;
+  height: 10px;
+  font-size: 2vw;
+  outline:none;
+  border: none;
+  cursor:pointer;
+}
+
+.btnBackgroundColor{
+  background: rgb(107, 110, 107);
+}
+
+.btnColor{
+  color: white;
+}

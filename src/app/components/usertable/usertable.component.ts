@@ -5,6 +5,7 @@ import {MatTableDataSource} from '@angular/material/table';
 import {SelectionModel} from '@angular/cdk/collections';
 import { EditAdminDialogComponent } from '../edit-admin-dialog/edit-admin-dialog.component';
 import {MatDialog} from '@angular/material/dialog';
+
 export interface UserData {
   id: number;
   dealership: string;

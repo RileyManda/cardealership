@@ -16,19 +16,26 @@
   </form>
 
   <div class="example-button-row">
-
-      <button mat-flat-button>
+    <button mat-stroked-button [matMenuTriggerFor]="bulkaction">
       <mat-icon>keyboard_arrow_down</mat-icon> Bulk Actions
     </button>
-    <button mat-raised-button routerLink="/add-dealership">
+    <button mat-stroked-button routerLink="/add-dealership">
       Add Dealerships
     </button>
-    <button mat-raised-button>Filters</button>
+    <button mat-stroked-button>Filters</button>
   </div>
 
   <mat-menu #bulkaction="matMenu">
-    <button mat-menu-item>Export To Csv</button>
-    <button mat-menu-item>Export To Pdf</button>
+    <button mat-menu-item>
+      <mat-icon>list_alt</mat-icon>
+      Export To Csv
+    </button>
+
+    <button mat-menu-item>
+      <mat-icon>list_alt</mat-icon>
+      Export To Pdf
+    </button>
+
   </mat-menu>
 </div>
 
@@ -90,12 +97,15 @@
     <ng-container matColumnDef="action">
       <th mat-header-cell *matHeaderCellDef mat-sort-header>Action</th>
       <td mat-cell *matCellDef="let row">
-        <button mat-icon-button aria-hidden="false" aria-label="edit dealership" (click)="openEditDialog()">
-          <mat-icon>mode_edit</mat-icon>
+        <button
+          mat-icon-button
+          aria-hidden="false"
+          aria-label="edit dealership"
+          (click)="openEditDialog()"
+        >
+        <mat-icon fontSet="material-icons-outlined">edit</mat-icon>
+          <!-- <mat-icon>EditOffOutlined</mat-icon> -->
         </button>
-
-
-
       </td>
     </ng-container>
 
