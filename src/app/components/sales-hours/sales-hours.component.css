@@ -87,6 +87,13 @@ section {
   min-width: unset!important;
 }
 
+
+.time-selection-forms{
+  width: 200px!important;
+  min-width: unset!important;
+}
+
+
 .closed-button{
   width: 200px!important;
   min-width: unset!important;
@@ -101,9 +108,16 @@ section {
   min-width: unset!important;
 }
 
+.icon-btn-width-hours{
+  width: 50px!important;
+  min-width: unset!important;
+  height: 55px;
+}
+
 .btn-toggle{
   width: 100px!important;
   min-width: unset!important;
+
 }
 .example-button-row {
   display: table-cell;

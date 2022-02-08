@@ -48,6 +48,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { HttpClientModule } from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { NgxMatTimepickerModule } from 'ngx-mat-timepicker';
 
 
 
@@ -107,6 +108,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    NgxMatTimepickerModule
 
 
 

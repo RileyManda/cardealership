@@ -1,21 +1,22 @@
 
 <div *ngFor="let buzhours of businessHours">
-
   <div fxLayout="row" fxLayoutGap="40px" *ngIf = "!isNotVisible">
     <span>{{buzhours.day}} </span>
     <span> <button mat-stroked-button class="closed-button">Closed</button> </span>
-
     <button mat-stroked-button class="icon-btn-width" (click) = toggleDisplay()><mat-icon>add</mat-icon></button>
   </div><br>
-
   <div fxLayout="row" fxLayoutGap="40px" *ngIf = "!isShow">
-    <span>Monday </span>
-    <button mat-stroked-button class="btn-toggle">Closed</button>
-    <button mat-stroked-button class="btn-toggle">Closed</button>
-    <button mat-stroked-button class="icon-btn-width" (click) = toggleDisplay()><mat-icon>highlight_off</mat-icon></button>
+    <span>{{buzhours.day}} </span>
+    <mat-form-field appearance="outline" class="btn-toggle">
+      <input matInput [(ngModel)]="time" [ngxMatTimepicker]="picker">
+      <ngx-mat-timepicker #picker></ngx-mat-timepicker>
+    </mat-form-field>
+   <mat-form-field appearance="outline" class="btn-toggle">
+      <input matInput [(ngModel)]="time" [ngxMatTimepicker]="picker">
+      <ngx-mat-timepicker #picker></ngx-mat-timepicker>
+    </mat-form-field>
+    <button mat-stroked-button class="icon-btn-width-hours" (click) = toggleDisplay()><mat-icon>highlight_off</mat-icon></button>
   </div><br>
-
-
 </div>
 
 
