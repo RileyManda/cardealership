@@ -1,15 +1,31 @@
-<div class ="btn-align">
-  <form class="search-form">
-    <mat-form-field class="example-full-width" appearance="outline">
-      <mat-icon matSuffix>search</mat-icon>
-      <mat-label>Search</mat-label>
-      <input matInput (keyup)="applyFilter($event)" placeholder="Search"
-      class="form-control form-control-sm ml-3 w-75" type="text"
-       aria-label="Search" #input>
-    </mat-form-field>
-  </form>
- <mat-chip>Add Systems Administrator</mat-chip>
+
+
+  <div class="container">
+    <div fxLayout="row" fxLayout.gt-xs="row">
+        <mat-form-field class="full-width" appearance="outline">
+          <mat-icon matSuffix>search</mat-icon>
+          <mat-label>Administrator Search</mat-label>
+          <input
+            matInput
+            (keyup)="applyFilter($event)"
+            placeholder="Search"
+            class="form-control form-control-sm ml-3 w-75"
+            type="text"
+            aria-label="Search"
+            #input
+          />
+        </mat-form-field>
+    </div>
+
+    <div fxLayout="column" fxLayout.gt-xs="row">
+      <div class="example-button-row">
+        <button mat-button (click)="openAddSysDialog()">Add Systems Administrator</button>
+      </div>
+
+    </div>
+
   </div>
+
 
 
 <div class="mat-elevation-z8">
@@ -41,7 +57,7 @@
 
     <!-- Administrator Column -->
     <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header> Administrator </th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Systems Administrator </th>
       <td mat-cell *matCellDef="let row">
         <mat-chip
         onClick={handleClick}
@@ -56,7 +72,7 @@
         <!-- Action Column -->
         <ng-container matColumnDef="action">
           <th mat-header-cell *matHeaderCellDef mat-sort-header> Action </th>
-          <td mat-cell *matCellDef="let row"><mat-icon matSuffix>mode_edit_outline</mat-icon>
+          <td mat-cell *matCellDef="let row"> <mat-icon fontSet="material-icons-outlined">edit</mat-icon>
          </td>
         </ng-container>
 

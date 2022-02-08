@@ -62,7 +62,7 @@ td, th {
   box-shadow: 0 1px 0 0 #4dd0e1;
   }
 
- 
+
 
   .active-cyan input[type=text] {
   border-bottom: 1px solid #4dd0e1;
@@ -118,3 +118,10 @@ td, th {
     margin: 0 8px 8px 0;
   }
 
+  .container {
+    display: grid;
+    grid-auto-columns: minmax(15rem, auto);
+    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+    grid-gap: 1rem;
+    flex-basis: 20%;
+  }

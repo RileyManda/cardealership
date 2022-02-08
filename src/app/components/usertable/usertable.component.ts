@@ -5,18 +5,25 @@ import {MatTableDataSource} from '@angular/material/table';
 import {SelectionModel} from '@angular/cdk/collections';
 import { EditAdminDialogComponent } from '../edit-admin-dialog/edit-admin-dialog.component';
 import {MatDialog} from '@angular/material/dialog';
+import {MatChipInputEvent} from '@angular/material/chips';
+import {COMMA, ENTER} from '@angular/cdk/keycodes';
 
 export interface UserData {
   id: number;
   dealership: string;
-  name: string;
   administrator: string;
   action: string;
 }
+
+
+
+export interface Admins {
+  name: string;
+}
 /** Constants used to fill up our data base. */
 const ELEMENT_DATA: UserData[] = [
-  {id :1, dealership: 'Maia',name: 'Maia',administrator: 'John',action: '+'},
-  {id :1, dealership: 'Asher',name: 'Olivia',administrator: 'Asher',action: '+'},
+  {id :1, dealership: 'Maia',administrator: 'John',action: '+'},
+  {id :1, dealership: 'Asher',administrator: 'Asher',action: '+'},
 ];
 
 const Dealership: string[] = [
@@ -96,7 +103,7 @@ const Action: string[] = [
   styleUrls: ['./usertable.component.scss']
 })
 export class UsertableComponent implements AfterViewInit {
-  displayedColumns: string[] = ['select','id','dealership', 'name','administrator','action'];
+  displayedColumns: string[] = ['select','id','dealership','administrator','action'];
   dataSource= new MatTableDataSource<UserData>(ELEMENT_DATA);
   selection = new SelectionModel<UserData>(true, []);
   @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -110,6 +117,35 @@ export class UsertableComponent implements AfterViewInit {
     // Assign the data to the data source for the table to render
     this.dataSource = new MatTableDataSource(users);
   }
+
+  // add admin chip functions
+
+
+  addOnBlur = true;
+  readonly separatorKeysCodes = [ENTER, COMMA] as const;
+  admins: Admins[] = [{name: 'Malinda Barrett'}];
+
+  add(event: MatChipInputEvent): void {
+    const value = (event.value || '').trim();
+
+    // Add admin
+    if (value) {
+      this.admins.push({name: value});
+    }
+
+    // Clear the input value
+    event.chipInput!.clear();
+  }
+
+  remove(admins: Admins): void {
+    const index = this.admins.indexOf(admins);
+
+    if (index >= 0) {
+      this.admins.splice(index, 1);
+    }
+  }
+
+  // dialogs
   openEditDialog() {
     this.dialog.open(EditAdminDialogComponent);
   }
@@ -159,12 +195,6 @@ function createNewUser(id: number): UserData {
   Dealership[Math.round(Math.random() * (Dealership.length - 1))].charAt(0) +
   '.';
 
-  const name =
-    DealershipName[Math.round(Math.random() * (DealershipName.length - 1))] +
-    ' ' +
-    DealershipName[Math.round(Math.random() * (DealershipName.length - 1))].charAt(0) +
-    '.';
-
     const administrator =
     Administrator[Math.round(Math.random() * (Administrator.length - 1))] +
     ' ' +
@@ -181,7 +211,6 @@ function createNewUser(id: number): UserData {
   return {
     id: id,
     dealership: dealership,
-    name: name,
     administrator: Administrator[Math.round(Math.random() * (Administrator.length - 1))],
     action: action,
   };

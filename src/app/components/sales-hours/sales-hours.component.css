@@ -53,3 +53,66 @@ section {
   justify-content: center;
   width: 120px;
 }
+
+
+.container {
+  display: grid;
+  grid-auto-columns: minmax(12rem, auto);
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  grid-gap: 1rem;
+  flex-basis: 20%;
+  grid: gap 2px;
+}
+
+.item {
+  background: #747373;
+  border: 3px solid #6e6e6e;
+  color: #636262;
+  padding: 2rem;
+  font-size: 2rem;
+  text-align: center;
+}
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.small-form-field{
+  width:170px !important;
+}
+
+.buttonWidth{
+  width: 200px!important;
+  min-width: unset!important;
+}
+
+.closed-button{
+  width: 200px!important;
+  min-width: unset!important;
+  outline-style: dashed;
+  outline-color: #afadad;
+  outline-width: 1px;
+
+}
+
+.icon-btn-width{
+  width: 50px!important;
+  min-width: unset!important;
+}
+
+.btn-toggle{
+  width: 100px!important;
+  min-width: unset!important;
+}
+.example-button-row {
+  display: table-cell;
+  width: 490px;
+}
+.add-new-chip{
+  cursor: pointer;
+}
+
+/* flex row */
+
+

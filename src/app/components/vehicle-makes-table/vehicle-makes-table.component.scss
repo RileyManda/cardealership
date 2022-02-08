@@ -1,13 +1,4 @@
-a { cursor: pointer }
-table{
-  width: 100%;
- }
 
- .btn-edit-user {
-  width: 40px;
-  text-align: center;
-  box-sizing: content-box;
-}
 
 .mat-form-field {
   font-size: 14px;
@@ -15,7 +6,7 @@ table{
 }
 
 td, th {
-  width: 25%;
+  width: 50%;
 }
 
 .btn-align  {
@@ -26,7 +17,7 @@ td, th {
 .search-form {
   min-width: 150px;
   max-width: 500px;
-  width: 50%;
+  width: 100%;
 }
 
 .search-full-width {
@@ -71,16 +62,7 @@ td, th {
   box-shadow: 0 1px 0 0 #4dd0e1;
   }
 
-  .button {
-  display: inline-block;
-  vertical-align: top;
-  width: 80px;
-  height: 30px;
-  line-height: 30px;
-  background: gray;
-  margin: 0 4px;
-  text-align: center;
-}
+
 
   .active-cyan input[type=text] {
   border-bottom: 1px solid #4dd0e1;
@@ -143,42 +125,3 @@ td, th {
     grid-gap: 1rem;
     flex-basis: 20%;
   }
-  .full-width {
-  width: 100%;
-}
-.left-form {
-  width: 50px;
-
-}
-
-.filler {
-
-  background: lightgreen;
-  width: 10px;
-}
-
-.right-buttons {
-  width: 50px;
-
-}
-.chip-add {
-  transform: scale(1);
-  cursor: pointer;
-    justify-content: space-between;
-
-}
-
-.add-chip-form{
-  justify-content: space-between;
-  border-radius: 0 !important;
-  outline: none;
-}
-
-.add-chip-group{
-  justify-content: space-between;
-}
-
-.add-new-chip{
-  cursor: pointer;
-}
-

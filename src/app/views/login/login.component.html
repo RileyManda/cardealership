@@ -1,4 +1,4 @@
-<div class="register-photo">
+<div class="login-container">
   <div class="form-container">
     <form>
       <p>Welcome</p>
@@ -6,20 +6,20 @@
 
       <!-- <div class="validation-error">Invalid Username or Password</div> -->
       <!-- Error Message Component to Come Here -->
-
       <mat-form-field appearance="fill">
         <mat-label>Email</mat-label>
-        <input matInput placeholder="Email" />
+        <input matInput placeholder="Email" [formControl]="emailFormControl" [errorStateMatcher]="matcher" />
         <mat-icon matSuffix>email</mat-icon>
       </mat-form-field>
 
-      <mat-form-field appearance="fill">
+      <mat-form-field appearance="fill" >
         <mat-label>Password</mat-label>
         <input
           matInput
           placeholder="Password"
           type="password"
           [type]="hide ? 'password' : 'text'"
+          [formControl]="passwordFormControl" [errorStateMatcher]="matcher"
         />
         <button
           mat-icon-button

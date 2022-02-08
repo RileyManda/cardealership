@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AddAdminDialogComponent } from './add-admin-dialog.component';
+import { VehicleMakesTableComponent } from './vehicle-makes-table.component';
 
-describe('AddAdminDialogComponent', () => {
-  let component: AddAdminDialogComponent;
-  let fixture: ComponentFixture<AddAdminDialogComponent>;
+describe('VehicleMakesTableComponent', () => {
+  let component: VehicleMakesTableComponent;
+  let fixture: ComponentFixture<VehicleMakesTableComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AddAdminDialogComponent ]
+      declarations: [ VehicleMakesTableComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AddAdminDialogComponent);
+    fixture = TestBed.createComponent(VehicleMakesTableComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

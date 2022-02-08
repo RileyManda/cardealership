@@ -1,9 +1,11 @@
+import { AddSystemsAdminDialogComponent } from './../add-systems-admin-dialog/add-systems-admin-dialog.component';
 
 import { Component, OnInit,AfterViewInit, ViewChild } from '@angular/core';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
 import {SelectionModel} from '@angular/cdk/collections';
+import {MatDialog} from '@angular/material/dialog';
 export interface UserData {
   id: number;
   name: string;
@@ -29,22 +31,27 @@ const Action: string[] = [
   'Asher',
 ];
 @Component({
-  selector: 'app-admin-table',
-  templateUrl: './admin-table.component.html',
-  styleUrls: ['./admin-table.component.scss']
+  selector: 'app-manage-syst-admin-table',
+  templateUrl: './manage-syst-admin-table.component.html',
+  styleUrls: ['./manage-syst-admin-table.component.scss']
 })
-export class AdminTableComponent  implements AfterViewInit  {
+export class ManageSystemsAdminTableComponent  implements AfterViewInit  {
   displayedColumns: string[] = ['select','id','name','action'];
   dataSource= new MatTableDataSource<UserData>(ELEMENT_DATA);
   selection = new SelectionModel<UserData>(true, []);
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
-  constructor() {
+
+
+  constructor(public dialog: MatDialog) {
     const users = Array.from({length: 100}, (_, k) => createNewUser(k + 1));
 
 
     // Assign the data to the data source for the table to render
     this.dataSource = new MatTableDataSource(users);
+  }
+  openAddSysDialog() {
+    this.dialog.open(AddSystemsAdminDialogComponent);
   }
 
   ngAfterViewInit() {
@@ -111,6 +118,8 @@ function createNewUser(id: number): UserData {
     name: Administrator[Math.round(Math.random() * (Administrator.length - 1))],
     action: action,
   };
+
+
 }
 
 

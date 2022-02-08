@@ -19,7 +19,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UsertableComponent } from './components/usertable/usertable.component';
 import { ResetComponent } from './views/reset/reset.component';
 import { NotificationComponent } from './components/notification/notification.component';
-import { AddAdminDialogComponent } from './components/add-admin-dialog/add-admin-dialog.component';
+import { AddSystemsAdminDialogComponent } from './components/add-systems-admin-dialog/add-systems-admin-dialog.component';
 import { AddDealershipComponent } from './views/add-dealership/add-dealership.component';
 import { FormGridComponent } from './components/form-grid/form-grid.component';
 import { SearchFormComponent } from './components/search-form/search-form.component';
@@ -44,10 +44,16 @@ import { ManageVehicleMakesComponent } from './views/manage-vehicle-makes/manage
 import { MainGridComponent } from './components/main-grid/main-grid.component';
 import { ManageSystemsAdminsComponent } from './views/manage-systems-admins/manage-systems-admins.component';
 import { TableAdminButtonsComponent } from './components/table-admin-buttons/table-admin-buttons.component';
-import { AdminTableComponent } from './components/admin-table/admin-table.component';
+import { ManageSystemsAdminTableComponent } from './components/manage-syst-admin-table/manage-syst-admin-table.component';
 import { UploadLogoComponent } from './components/upload-logo/upload-logo.component';
 import { AvatarComponent } from './components/avatar/avatar.component';
 import { EditAdminDialogComponent } from './components/edit-admin-dialog/edit-admin-dialog.component';
+
+import { ManageSystemsAdministratorComponent } from './views/manage-systems-administrator/manage-systems-administrator.component';
+import { VehicleMakesTableComponent } from './components/vehicle-makes-table/vehicle-makes-table.component';
+import { VehicleMakesDialogComponent } from './components/vehicle-makes-dialog/vehicle-makes-dialog.component';
+import { AddDealershipAdminDialogComponent } from './components/add-dealership-admin-dialog/add-dealership-admin-dialog.component';
+import { AppLoaderComponent } from './services/app-loader/app-loader.component';
 
 
 
@@ -68,7 +74,7 @@ import { EditAdminDialogComponent } from './components/edit-admin-dialog/edit-ad
     UsertableComponent,
     ResetComponent,
     NotificationComponent,
-    AddAdminDialogComponent,
+    AddSystemsAdminDialogComponent,
     AddDealershipComponent,
     FormGridComponent,
     SearchFormComponent,
@@ -86,10 +92,16 @@ import { EditAdminDialogComponent } from './components/edit-admin-dialog/edit-ad
     ManageVehicleMakesComponent,
     ManageSystemsAdminsComponent,
     TableAdminButtonsComponent,
-    AdminTableComponent,
+    ManageSystemsAdminTableComponent,
     UploadLogoComponent,
     AvatarComponent,
-    EditAdminDialogComponent
+    EditAdminDialogComponent,
+    ManageSystemsAdministratorComponent,
+    VehicleMakesTableComponent,
+    VehicleMakesDialogComponent,
+    AddDealershipAdminDialogComponent,
+    AppLoaderComponent,
+
 
   ],
   imports: [

@@ -47,6 +47,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { HttpClientModule } from '@angular/common/http';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 
 
@@ -104,6 +105,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatFormFieldModule,
     MatInputModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
 
 
 

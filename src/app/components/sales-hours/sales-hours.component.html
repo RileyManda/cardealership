@@ -1,101 +1,21 @@
-<!-- <mat-list>
-  <mat-list-item *ngFor="let user of closed">
-    <button mat-raised-button color="warn">
-    {{user}}
-</button>
-  </mat-list-item>
-</mat-list> -->
-<section>
 
-  <div class="button-row">
-    <button mat-button>Sunday</button>
+<div *ngFor="let buzhours of businessHours">
 
-  </div>
-  <div class="button-row">
-    <button mat-button>Closed</button>
+  <div fxLayout="row" fxLayoutGap="40px" *ngIf = "!isNotVisible">
+    <span>{{buzhours.day}} </span>
+    <span> <button mat-stroked-button class="closed-button">Closed</button> </span>
 
-  </div>
+    <button mat-stroked-button class="icon-btn-width" (click) = toggleDisplay()><mat-icon>add</mat-icon></button>
+  </div><br>
 
-
-</section>
-<section>
-
-  <div class="button-row">
-    <button mat-button>Monday</button>
-
-  </div>
-  <div class="button-row">
-    <button mat-button>Closed</button>
-
-  </div>
+  <div fxLayout="row" fxLayoutGap="40px" *ngIf = "!isShow">
+    <span>Monday </span>
+    <button mat-stroked-button class="btn-toggle">Closed</button>
+    <button mat-stroked-button class="btn-toggle">Closed</button>
+    <button mat-stroked-button class="icon-btn-width" (click) = toggleDisplay()><mat-icon>highlight_off</mat-icon></button>
+  </div><br>
 
 
-</section>
-<section>
+</div>
 
-  <div class="button-row">
-    <button mat-button>Tuesday</button>
-
-  </div>
-  <div class="button-row">
-    <button mat-button>Closed</button>
-
-  </div>
-
-
-</section>
-<section>
-
-  <div class="button-row">
-    <button mat-button>Wednesday</button>
-
-  </div>
-  <div class="button-row">
-    <button mat-button>Closed</button>
-
-  </div>
-
-
-</section>
-<section>
-
-  <div class="button-row">
-    <button mat-button>Thursday</button>
-
-  </div>
-  <div class="button-row">
-    <button mat-button>Closed</button>
-
-  </div>
-
-
-</section>
-<section>
-
-  <div class="button-row">
-    <button mat-button>Friday</button>
-
-  </div>
-  <div class="button-row">
-    <button mat-button>Closed</button>
-
-  </div>
-
-
-</section>
-
-<section>
-
-  <div class="button-row">
-    <button mat-button>Saturday</button>
-
-  </div>
-  <div class="button-row">
-    <button mat-button>Closed</button>
-
-
-  </div>
-
-
-</section>
 

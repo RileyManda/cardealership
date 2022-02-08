@@ -58,3 +58,36 @@
 // {align-items: center; }
 
 
+
+.container {
+  display: grid;
+  grid-auto-columns: minmax(15rem, auto);
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  grid-gap: 1rem;
+  flex-basis: 20%;
+}
+.item {
+  background: #747373;
+  border: 3px solid #6e6e6e;
+  color: #636262;
+  padding: 2rem;
+  font-size: 2rem;
+  text-align: center;
+}
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+// .example-full-width {
+//   width: 100%;
+// }
+.small-form-field{
+  width:170px !important;
+}
+.allbuttons {
+  color: #ffffff;
+  background-color: #25b34f;
+  width: 300px!important;
+  min-width: unset!important;
+}

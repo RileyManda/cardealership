@@ -7,6 +7,8 @@ export interface ChipColor {
   name: string;
 
 }
+
+
 @Component({
   selector: 'app-sales-hours',
   templateUrl: './sales-hours.component.html',
@@ -14,7 +16,12 @@ export interface ChipColor {
 })
 export class SalesHoursComponent {
   mobileQuery: MediaQueryList;
-
+  isShow = false;
+  isNotVisible = true;
+  toggleDisplay() {
+    this.isShow = !this.isShow;
+    this.isNotVisible = !this.isNotVisible;
+  }
   fillerNav = Array(50).fill(0).map((_, i) => `Nav Item ${i + 1}`);
 
   closed = ["Closed", "Closed", "Closed", "Closed", "Closed", "Closed"]
@@ -31,7 +38,17 @@ export class SalesHoursComponent {
     this.mobileQuery.removeListener(this._mobileQueryListener);
   }
 
-  shouldRun = [/(^|\.)plnkr\.co$/, /(^|\.)stackblitz\.io$/].some(h => h.test(window.location.host));
+   businessHours: Array<{id: number, day: string,btn:string}> = [
+    { id: 1, day: "Monday",btn: "hello"},
+    { id: 1, day: "Tuesday",btn: "hello" },
+    {id: 1, day: "Wednesday",btn: "hello" },
+    { id: 1, day: "Thursday",btn: "hello" },
+    { id: 1, day: "Friday",btn: "hello" },
+    { id: 1, day: "Saturday",btn: "hello" },
+    { id: 1, day: "Sunday",btn: "hello" }
+  ];
+
+
 }
 
 
