@@ -59,8 +59,8 @@ import { fakeBackendProvider } from './_helpers';
 
 
 import { JwtInterceptor, ErrorInterceptor } from './_helpers';
-import { AlertComponent } from './components/alert/alert.component';
-import { DashboardComponent } from './views/dashboard/dashboard.component';
+import { AlertComponent } from './components/alerts/alert.component';
+
 
 
 @NgModule({
@@ -100,6 +100,8 @@ import { DashboardComponent } from './views/dashboard/dashboard.component';
     VehicleMakesDialogComponent,
     AddDealershipAdminDialogComponent,
     AppLoaderComponent,
+    AlertComponent,
+
 
 
   ],

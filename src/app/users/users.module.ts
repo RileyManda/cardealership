@@ -7,6 +7,7 @@ import { LayoutComponent } from './layout.component';
 import { DashboardComponent } from '../views/dashboard/dashboard.component';
 import { MaterialModule } from '../material-module';
 
+
 @NgModule({
     imports: [
         CommonModule,
@@ -17,6 +18,7 @@ import { MaterialModule } from '../material-module';
     declarations: [
         LayoutComponent,
         DashboardComponent,
+
 
     ]
 })

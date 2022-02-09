@@ -2,7 +2,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 // views
-import { HomeComponent } from './views/home/home.component';
 import { ResetComponent } from './account/reset/reset.component';
 import { AddDealershipComponent } from './views/add-dealership/add-dealership.component';
 import { DashboardComponent } from './views/dashboard/dashboard.component';
@@ -20,9 +19,9 @@ const usersModule = () => import('./users/users.module').then(x => x.UsersModule
 
 // routes
 const routes: Routes = [
-  { path: '', component: DashboardComponent ,canActivate:[AuthGuard]},
+  { path: '', component: DashboardComponent, canActivate: [AuthGuard] },
   { path: 'users', loadChildren: usersModule, canActivate: [AuthGuard] },
-    { path: 'account', loadChildren: accountModule },
+  { path: 'account', loadChildren: accountModule },
 
 
 

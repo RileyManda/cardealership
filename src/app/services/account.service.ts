@@ -17,9 +17,9 @@ export class AccountService {
         private http: HttpClient
     ) {
 
-      this.userSubject = new BehaviorSubject(JSON.parse(localStorage.getItem('user')));
+      // this.userSubject = new BehaviorSubject(JSON.parse(localStorage.getItem('user')));
         this.userSubject = new BehaviorSubject<User>(JSON.parse(localStorage.getItem('user')));
-        this.userSubject = JSON.parse(localStorage.getItem('user') || '{}');
+        // this.userSubject = JSON.parse(localStorage.getItem('user') || '{}');
         // this.user = this.userSubject.asObservable();
     }
 
@@ -28,12 +28,17 @@ export class AccountService {
     }
 
     login(username: string, password: string) {
+      console.log(username,password);
         return this.http.post<User>(`${environment.apiUrl}/users/authenticate`, { username, password })
             .pipe(map(user => {
+              console.log(user);
                 // store user details and jwt token in local storage to keep user logged in between page refreshes
                 localStorage.setItem('user', JSON.stringify(user));
+                console.log(this.userSubject);
                 this.userSubject.next(user);
+                console.log('testing');
                 return user;
+
             }));
     }
 
