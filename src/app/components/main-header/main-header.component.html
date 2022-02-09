@@ -8,7 +8,8 @@
       [matMenuTriggerFor]="menu">
       R
     </button></a>
-  <span [ngStyle]="{ color: 'grey' }">Rob</span>
+    <span class="gap"></span>
+  <span [ngStyle]="{ color: 'grey' }">{{user.username}}</span>
   <a mat-icon-button [matMenuTriggerFor]="moreitems">
     <mat-icon class="grey-icon">more_vert</mat-icon>
   </a>
@@ -21,9 +22,9 @@
     <button mat-menu-item routerLink="/manage-admin">
       Manage Systems Administrator
     </button>
-    <button mat-menu-item routerLink="/manage-vehicle-makes">Manage Vehicle Make</button>
-    <button mat-menu-item routerLink="/dashboard">Main Menu</button>
-    <button mat-menu-item routerLink="/login">LogOut</button>
+    <button mat-menu-item routerLink="/manage-vehicles">Manage Vehicle Make</button>
+    <button mat-menu-item routerLink="/">Main Menu</button>
+    <button mat-menu-item routerLink="/login" (click)="logout()">LogOut</button>
   </mat-menu>
   <mat-menu #moreitems="matMenu">
     <button mat-menu-item>Profile</button>

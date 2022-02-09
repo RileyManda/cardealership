@@ -21,4 +21,8 @@ table {
   margin: 0 auto !important;
 }
 
+.header-spacer {
+  flex: 1 1 auto;
+}
+
 

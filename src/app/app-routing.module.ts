@@ -22,6 +22,11 @@ const routes: Routes = [
   { path: '', component: DashboardComponent, canActivate: [AuthGuard] },
   { path: 'users', loadChildren: usersModule, canActivate: [AuthGuard] },
   { path: 'account', loadChildren: accountModule },
+  { path: 'add-dealership', component: AddDealershipComponent },
+  { path: 'change-password', component: ChangepasswordComponent },
+  { path: 'otp', component: OtpScreenComponent },
+  { path: 'manage-admin', component: ManageSystemsAdminsComponent },
+  { path: 'manage-vehicles', component: ManageVehicleMakesComponent },
 
 
 
