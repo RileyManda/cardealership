@@ -51,8 +51,16 @@ import { AddDealershipAdminDialogComponent } from './components/add-dealership-a
 import { AppLoaderComponent } from './components/app-loader/app-loader.component';
 
 
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+
+// used to create fake backend
+import { fakeBackendProvider } from './_helpers';
 
 
+import { JwtInterceptor, ErrorInterceptor } from './_helpers';
+import { AlertComponent } from './components/alert/alert.component';
+import { DashboardComponent } from './views/dashboard/dashboard.component';
 
 
 @NgModule({
@@ -107,7 +115,13 @@ import { AppLoaderComponent } from './components/app-loader/app-loader.component
     MatButtonModule,
     LayoutModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+
+    // provider used to create fake backend
+    fakeBackendProvider
+],
+bootstrap: [AppComponent]
 })
 export class AppModule { }

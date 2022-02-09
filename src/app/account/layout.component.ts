@@ -9,9 +9,9 @@ export class LayoutComponent {
         private router: Router,
         private accountService: AccountService
     ) {
-        // redirect to home if already logged in
+        // redirect to dashboard if already logged in
         if (this.accountService.userValue) {
-            this.router.navigate(['/']);
+            this.router.navigate(['dashboard']);
         }
     }
 }

@@ -6,8 +6,8 @@
         <div *ngIf="f['password'].errors['required']">Password is required</div>
         <div *ngIf="f['password'].errors['minlength']">Password must be at least 6 characters</div>
     </div>
-    <div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
-      <div *ngIf="f['email'].errors['required']">Email cannot be empty</div>
+    <div *ngIf="submitted && f['username'].errors" class="invalid-feedback">
+      <div *ngIf="f['username'].errors['required']">Email cannot be empty</div>
   </div>
 
       <p>Welcome</p>
@@ -18,8 +18,7 @@
 
       <mat-form-field appearance="fill">
         <mat-label>Email</mat-label>
-
-        <input matInput placeholder="Email" formControlName="email" [ngClass]="{ 'is-invalid': submitted && f['email'].errors }" />
+        <input matInput placeholder="Email/UserName" formControlName="username" [ngClass]="{ 'is-invalid': submitted && f['username'].errors }" />
         <mat-icon matSuffix>email</mat-icon>
       </mat-form-field>
 

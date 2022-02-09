@@ -1,9 +1,11 @@
 <div class="login-container">
   <div class="form-container">
     <form [formGroup]="form" (ngSubmit)="onSubmit()">
-      <div *ngIf="submitted && f['username'].errors" class="invalid-feedback">
-        <div *ngIf="f['username'].errors['required']">Username is required</div>
-    </div>
+
+
+    <div *ngIf="submitted && f['username'].errors" class="invalid-feedback">
+      <div *ngIf="f['username'].errors['required']">Email is required</div>
+  </div>
     <div *ngIf="submitted && f['password'].errors" class="invalid-feedback">
       <div *ngIf="f['password'].errors['required']">Password is required</div>
   </div>
@@ -14,7 +16,7 @@
       <!-- Error Message Component to Come Here -->
       <mat-form-field appearance="fill">
         <mat-label>Email</mat-label>
-        <input matInput placeholder="Email" formControlName="username" [ngClass]="{ 'is-invalid': submitted && f['username'].errors }" />
+        <input matInput placeholder="UserName/Email" formControlName="username" [ngClass]="{ 'is-invalid': submitted && f['username'].errors }" />
 
         <mat-icon matSuffix>email</mat-icon>
       </mat-form-field>
@@ -26,8 +28,9 @@
           placeholder="Password"
           type="password"
           [type]="hide ? 'password' : 'text'"
+         formControlName="password"
+         [ngClass]="{ 'is-invalid': submitted && f['password'].errors }" />
 
-        />
         <button
           mat-icon-button
           matSuffix
@@ -43,8 +46,11 @@
       <br />
 
       <mat-checkbox class="">Remember me</mat-checkbox><br /><br />
-      <button mat-raised-button class="allbuttons" routerLink="/dashboard">
+      <button mat-raised-button class="allbuttons">
+        <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
         Sign In</button
+
+
       ><br /><br />
       <p class="member-link">
         Not already a member?
@@ -54,6 +60,19 @@
         Forgot password
         <a mat-button routerLink="../reset">Reset</a>
       </p>
+
+      <p class="member-link">
+        Dashboard
+        <a mat-button routerLink="../dashboard">TemporaryLink</a>
+      </p>
+
+      <div class="form-group">
+        <button [disabled]="loading" class="btn btn-primary">
+            <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+            Login
+        </button>
+        <a routerLink="../register" class="btn btn-link">Register</a>
+    </div>
     </form>
     <div class="image-holder"></div>
   </div>
