@@ -6,7 +6,7 @@ import { delay, materialize, dematerialize } from 'rxjs/operators';
 // array in local storage for registered users
 const usersKey = 'angularcrud';
 // let users = JSON.parse(localStorage.getItem(usersKey)) || [];
-let users = JSON.parse(localStorage.getItem(usersKey) || '{}');
+let users = JSON.parse(localStorage.getItem(usersKey)) || [];
 
 
 @Injectable()

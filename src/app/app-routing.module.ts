@@ -20,20 +20,12 @@ const usersModule = () => import('./users/users.module').then(x => x.UsersModule
 
 // routes
 const routes: Routes = [
-  { path: '', component: HomeComponent, pathMatch: "full" ,canActivate:[AuthGuard]},
+  { path: '', component: DashboardComponent ,canActivate:[AuthGuard]},
   { path: 'users', loadChildren: usersModule, canActivate: [AuthGuard] },
     { path: 'account', loadChildren: accountModule },
 
 
-  // { path: 'login', component: LoginComponent },
-  // { path: 'register', component: RegisterComponent },
-  // { path: 'reset', component: ResetComponent },
-  // { path: 'change-password', component: ChangepasswordComponent },
-  // { path: 'otp-screen', component: OtpScreenComponent },
-  // { path: 'dashboard', component: DashboardComponent },
-  // { path: 'add-dealership', component: AddDealershipComponent },
-  // { path: 'manage-admin', component: ManageSystemsAdminsComponent },
-  // { path: 'manage-vehicle-makes', component: ManageVehicleMakesComponent },
+
 
 
 ];

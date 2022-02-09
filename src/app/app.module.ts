@@ -14,7 +14,6 @@ import { MatOptionModule } from '@angular/material/core';
 import { MaterialModule } from './material-module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UsertableComponent } from './components/usertable/usertable.component';
-import { ResetComponent } from './account/reset/reset.component';
 import { NotificationComponent } from './components/notification/notification.component';
 import { AddSystemsAdminDialogComponent } from './components/add-systems-admin-dialog/add-systems-admin-dialog.component';
 import { AddDealershipComponent } from './views/add-dealership/add-dealership.component';
@@ -66,7 +65,6 @@ import { AppLoaderComponent } from './components/app-loader/app-loader.component
     DashheaderComponent,
     PageNotFoundComponent,
     UsertableComponent,
-    ResetComponent,
     NotificationComponent,
     AddSystemsAdminDialogComponent,
     AddDealershipComponent,

@@ -61,8 +61,5 @@ export class LoginComponent {
     }
 
 
-  gotToDashBoard=  () => {
-    this.router.navigateByUrl('/dashboard');
-};
 
 }
