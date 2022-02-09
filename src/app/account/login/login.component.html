@@ -1,6 +1,12 @@
 <div class="login-container">
   <div class="form-container">
-    <form>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div *ngIf="submitted && f['username'].errors" class="invalid-feedback">
+        <div *ngIf="f['username'].errors['required']">Username is required</div>
+    </div>
+    <div *ngIf="submitted && f['password'].errors" class="invalid-feedback">
+      <div *ngIf="f['password'].errors['required']">Password is required</div>
+  </div>
       <p>Welcome</p>
       <h2 class="text-center"><strong>Sign into your account</strong></h2>
 
@@ -8,7 +14,8 @@
       <!-- Error Message Component to Come Here -->
       <mat-form-field appearance="fill">
         <mat-label>Email</mat-label>
-        <input matInput placeholder="Email" [formControl]="emailFormControl" [errorStateMatcher]="matcher" />
+        <input matInput placeholder="Email" formControlName="username" [ngClass]="{ 'is-invalid': submitted && f['username'].errors }" />
+
         <mat-icon matSuffix>email</mat-icon>
       </mat-form-field>
 
@@ -19,7 +26,7 @@
           placeholder="Password"
           type="password"
           [type]="hide ? 'password' : 'text'"
-          [formControl]="passwordFormControl" [errorStateMatcher]="matcher"
+
         />
         <button
           mat-icon-button
@@ -30,6 +37,7 @@
         >
           <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
         </button>
+
       </mat-form-field>
 
       <br />
@@ -40,11 +48,11 @@
       ><br /><br />
       <p class="member-link">
         Not already a member?
-        <a mat-button routerLink="/register"> Sign Up</a>
+        <a mat-button routerLink="../register"> Sign Up</a>
       </p>
       <p class="member-link">
         Forgot password
-        <a mat-button routerLink="/reset">Reset</a>
+        <a mat-button routerLink="../reset">Reset</a>
       </p>
     </form>
     <div class="image-holder"></div>
