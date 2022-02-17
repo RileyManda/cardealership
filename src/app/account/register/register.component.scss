@@ -1,13 +1,13 @@
 .register-photo {
   background: #ffffff;
-  padding: 80px 0
+  padding: 80px 0;
 }
 
 .register-photo .image-holder {
   display: table-cell;
   width: auto;
   background: url(../../../assets/half_right.png);
-  background-size: cover
+  background-size: cover;
 }
 
 .register-photo .form-container {
@@ -15,7 +15,7 @@
   max-width: 900px;
   width: 90%;
   margin: 0 auto;
-  box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 }
 
 .register-photo form {
@@ -27,16 +27,16 @@
   height: 450px;
 }
 
-@media (max-width:991px) {
+@media (max-width: 991px) {
   .register-photo form {
-      padding: 90px
+    padding: 90px;
   }
 }
 
 .register-photo form h2 {
   font-size: 24px;
   line-height: 1.5;
-  margin-bottom: 30px
+  margin-bottom: 30px;
 }
 
 .register-photo form .form-control {
@@ -48,12 +48,12 @@
   outline: none;
   color: inherit;
   text-indent: 0px;
-  height: 40px
+  height: 40px;
 }
 
 .register-photo form .form-check {
   font-size: 13px;
-  line-height: 20px
+  line-height: 20px;
 }
 
 .register-photo form .btn-primary {
@@ -64,16 +64,16 @@
   box-shadow: none;
   margin-top: 35px;
   text-shadow: none;
-  outline: none !important
+  outline: none !important;
 }
 
 .register-photo form .btn-primary:hover,
 .register-photo form .btn-primary:active {
-  background: #ffffff
+  background: #ffffff;
 }
 
 .register-photo form .btn-primary:active {
-  transform: translateY(1px)
+  transform: translateY(1px);
 }
 
 .register-photo form .already {
@@ -82,7 +82,7 @@
   font-size: 12px;
   color: #ffffff;
   opacity: 0.9;
-  text-decoration: none
+  text-decoration: none;
 }
 .wrapper {
   display: flex;
@@ -104,7 +104,8 @@ mat-form-field {
 }
 
 ::ng-deep .custom-frame {
-  & .mat-checkbox-background, .mat-checkbox-frame {
+  & .mat-checkbox-background,
+  .mat-checkbox-frame {
     border-radius: 70% !important;
   }
 }
@@ -145,6 +146,6 @@ input[type="checkbox"] {
 .allbuttons {
   color: #ffffff;
   background-color: #25b34f;
-  width: 300px!important;
-  min-width: unset!important;
+  width: 300px !important;
+  min-width: unset !important;
 }

@@ -1,7 +1,7 @@
 <div class="login-container">
   <div class="form-container">
     <form [formGroup]="form" (ngSubmit)="onSubmit()">
-      <div *ngIf="submitted && f['username'].errors" class="invalid-feedback">
+      <div *ngIf="submitted && f['username'].errors" class="invalid-feedback" class="error">
         <div *ngIf="f['username'].errors['required']">Email is required</div>
       </div>
       <div *ngIf="submitted && f['password'].errors" class="invalid-feedback">

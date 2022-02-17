@@ -1,7 +1,7 @@
 .login-container {
   background: #ffffff;
   padding: 80px 0;
-  height:100%;
+  height: 100%;
 }
 
 .login-container .image-holder {
@@ -9,7 +9,7 @@
   width: auto;
   background: url(../../../assets/half_right.png);
   background-size: cover;
-  height:100%;
+  height: 100%;
 }
 
 .login-container .form-container {
@@ -17,7 +17,7 @@
   max-width: 900px;
   width: 100%;
   margin: 0 auto;
-  box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 }
 
 .login-container form {
@@ -29,16 +29,16 @@
   height: 450px;
 }
 
-@media (max-width:991px) {
+@media (max-width: 991px) {
   .login-container form {
-      padding: 90px
+    padding: 90px;
   }
 }
 
 .login-container form h2 {
   font-size: 24px;
   line-height: 1.5;
-  margin-bottom: 30px
+  margin-bottom: 30px;
 }
 
 .login-container form .form-control {
@@ -50,12 +50,12 @@
   outline: none;
   color: inherit;
   text-indent: 0px;
-  height: 40px
+  height: 40px;
 }
 
 .login-container form .form-check {
   font-size: 13px;
-  line-height: 20px
+  line-height: 20px;
 }
 
 .login-container form .btn-primary {
@@ -66,16 +66,16 @@
   box-shadow: none;
   margin-top: 35px;
   text-shadow: none;
-  outline: none !important
+  outline: none !important;
 }
 
 .rlogin-container form .btn-primary:hover,
 .login-container form .btn-primary:active {
-  background: #ffffff
+  background: #ffffff;
 }
 
 .login-container form .btn-primary:active {
-  transform: translateY(1px)
+  transform: translateY(1px);
 }
 
 .login-container form .already {
@@ -84,7 +84,7 @@
   font-size: 12px;
   color: #ffffff;
   opacity: 0.9;
-  text-decoration: none
+  text-decoration: none;
 }
 .wrapper {
   display: flex;
@@ -106,7 +106,8 @@ mat-form-field {
 }
 
 ::ng-deep .custom-frame {
-  & .mat-checkbox-background, .mat-checkbox-frame {
+  & .mat-checkbox-background,
+  .mat-checkbox-frame {
     border-radius: 70% !important;
   }
 }
@@ -147,6 +148,14 @@ input[type="checkbox"] {
 .allbuttons {
   color: #ffffff;
   background-color: #25b34f;
-  width: 300px!important;
-  min-width: unset!important;
+  width: 300px !important;
+  min-width: unset !important;
 }
+
+.invalid-feedback {
+  color: #ffffff;
+  background-color: #ee3a3a;
+  width: '100%' !important;
+  min-width: unset !important;
+}
+

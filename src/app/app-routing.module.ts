@@ -1,4 +1,3 @@
-
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 // views
@@ -11,11 +10,10 @@ import { ManageSystemsAdminsComponent } from './views/manage-systems-admins/mana
 import { ManageVehicleMakesComponent } from './views/manage-vehicle-makes/manage-vehicle-makes.component';
 import { AuthGuard } from './_helpers';
 
-
-const accountModule = () => import('./account/account.module').then(x => x.AccountModule);
-const usersModule = () => import('./users/users.module').then(x => x.UsersModule);
-
-
+const accountModule = () =>
+  import('./account/account.module').then((x) => x.AccountModule);
+const usersModule = () =>
+  import('./users/users.module').then((x) => x.UsersModule);
 
 // routes
 const routes: Routes = [
@@ -27,16 +25,10 @@ const routes: Routes = [
   { path: 'otp', component: OtpScreenComponent },
   { path: 'manage-admin', component: ManageSystemsAdminsComponent },
   { path: 'manage-vehicles', component: ManageVehicleMakesComponent },
-
-
-
-
-
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes
-    )],
-  exports: [RouterModule]
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

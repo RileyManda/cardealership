@@ -8,9 +8,8 @@ describe('OtpScreenComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ OtpScreenComponent ]
-    })
-    .compileComponents();
+      declarations: [OtpScreenComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
