@@ -45,14 +45,7 @@
 </div>
 
 <div class="mat-elevation-z8">
-  <!-- <button
-    mat-button
-    (click)="openDialog('Add', {})"
-    mat-flat-button
-    color="primary"
-  >
-    Add Administrator
-  </button> -->
+
   <!-- Table -------------------------------------------------------------->
   <table
     mat-table
@@ -94,12 +87,12 @@
           aria-label="Admin selection"
           class="add-chip-form"
          >
-          <mat-chip>
+          <mat-chip (click)="openDialog('Update Details', element)">
             {{ element.administrator }}
           </mat-chip>
 
           <mat-chip class="add-new-chip">
-              <mat-icon mat-button (click)="addDealership('Add Details', {})" >add</mat-icon>
+              <mat-icon mat-button (click)="addAdminDialog('Add', {})" >add</mat-icon>
           </mat-chip>
           <!-- <input
             [matChipInputFor]="chipList"

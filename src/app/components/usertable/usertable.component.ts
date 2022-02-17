@@ -99,6 +99,23 @@ export class UsertableComponent  {
     });
   }
 
+
+  addAdminDialog(action,obj) {
+    obj.action = action;
+    const dialogRef = this.dialog.open(AddSystemsAdminDialogComponent, {
+
+      data:obj
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if(result.event == 'Add'){
+        this.addRowData(result.data);
+      }else if(result.event == 'Update'){
+        this.updateRowData(result.data);
+      }
+    });
+  }
+
   addRowData(row_obj){
     var d = new Date();
     this.dataSource.push({
@@ -130,123 +147,4 @@ export class UsertableComponent  {
 
 
 }
-
-
-//   displayedColumns: string[] = ['select','id','dealership','administrator','action'];
-//   dataSource= new MatTableDataSource<UserData>(ELEMENT_DATA);
-//   selection = new SelectionModel<UserData>(true, []);
-//   @ViewChild(MatPaginator) paginator: MatPaginator;
-//   @ViewChild(MatSort) sort: MatSort;
-
-
-//   constructor(public dialog: MatDialog) {
-//     const users = Array.from({length: 100}, (_, k) => createNewUser(k + 1));
-
-
-//     // Assign the data to the data source for the table to render
-//     this.dataSource = new MatTableDataSource(users);
-//   }
-
-//   // add admin chip functions
-
-
-//   addOnBlur = true;
-//   readonly separatorKeysCodes = [ENTER, COMMA] as const;
-//   admins: Admins[] = [{name: 'Malinda Barrett'}];
-
-//   add(event: MatChipInputEvent): void {
-//     const value = (event.value || '').trim();
-
-//     // Add admin
-//     if (value) {
-//       this.admins.push({name: value});
-//     }
-
-//     // Clear the input value
-//     event.chipInput!.clear();
-//   }
-
-//   remove(admins: Admins): void {
-//     const index = this.admins.indexOf(admins);
-
-//     if (index >= 0) {
-//       this.admins.splice(index, 1);
-//     }
-//   }
-
-//   // dialogs
-//   openEditDialog() {
-//     this.dialog.open(EditAdminDialogComponent);
-//   }
-//   ngAfterViewInit() {
-//     this.dataSource.paginator = this.paginator;
-//     this.dataSource.sort = this.sort;
-//   }
-//   applyFilter(event: Event) {
-//     const filterValue = (event.target as HTMLInputElement).value;
-//     this.dataSource.filter = filterValue.trim().toLowerCase();
-
-//     if (this.dataSource.paginator) {
-//       this.dataSource.paginator.firstPage();
-//     }
-//   }
-
-//   /** Whether the number of selected elements matches the total number of rows. */
-//   isAllSelected() {
-//     const numSelected = this.selection.selected.length;
-//     const numRows = this.dataSource.data.length;
-//     return numSelected === numRows;
-//   }
-
-//   /** Selects all rows if they are not all selected; otherwise clear selection. */
-//   masterToggle() {
-//     if (this.isAllSelected()) {
-//       this.selection.clear();
-//       return;
-//     }
-
-//     this.selection.select(...this.dataSource.data);
-//   }
-//   /** The label for the checkbox on the passed row */
-//   checkboxLabel(row?: UserData): string {
-//     if (!row) {
-//       return `${this.isAllSelected() ? 'deselect' : 'select'} all`;
-//     }
-//     return `${this.selection.isSelected(row) ? 'deselect' : 'select'} row ${row.id + 1}`;
-//   }
-// }
-// /** Builds and returns a new User. */
-// function createNewUser(id: number): UserData {
-
-//   const dealership =
-//   Dealership[Math.round(Math.random() * (Dealership.length - 1))] +
-//   ' ' +
-//   Dealership[Math.round(Math.random() * (Dealership.length - 1))].charAt(0) +
-//   '.';
-
-//     const administrator =
-//     Administrator[Math.round(Math.random() * (Administrator.length - 1))] +
-//     ' ' +
-//     Administrator[Math.round(Math.random() * (Administrator.length - 1))].charAt(0) +
-//     '.';
-
-//     const action =
-//     Action[Math.round(Math.random() * (Action.length - 1))] +
-//     ' ' +
-//     Action[Math.round(Math.random() * (Action.length - 1))].charAt(0) +
-//     '.';
-
-
-//   return {
-//     id: id,
-//     dealership: dealership,
-//     administrator: Administrator[Math.round(Math.random() * (Administrator.length - 1))],
-//     action: action,
-//   };
-
-
-
-
-
-
 
