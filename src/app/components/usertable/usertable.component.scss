@@ -1,0 +1,184 @@
+a { cursor: pointer }
+table{
+  width: 100%;
+ }
+
+ .btn-edit-user {
+  width: 40px;
+  text-align: center;
+  box-sizing: content-box;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+td, th {
+  width: 25%;
+}
+
+.btn-align  {
+  display: flex;
+  justify-content: space-between;
+
+}
+.search-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 50%;
+}
+
+.search-full-width {
+  width: 100%;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+/* .mat-header-cell {
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mat-cell {
+  text-align: center;
+  justify-content:center;
+} */
+.active-pink-2 input[type=text]:focus:not([readonly]) {
+  border-bottom: 1px solid #f48fb1;
+  box-shadow: 0 1px 0 0 #f48fb1;
+  }
+
+  .active-pink input[type=text] {
+  border-bottom: 1px solid #f48fb1;
+  box-shadow: 0 1px 0 0 #f48fb1;
+  }
+
+  .active-purple-2 input[type=text]:focus:not([readonly]) {
+  border-bottom: 1px solid #ce93d8;
+  box-shadow: 0 1px 0 0 #ce93d8;
+  }
+
+  .active-purple input[type=text] {
+  border-bottom: 1px solid #ce93d8;
+  box-shadow: 0 1px 0 0 #ce93d8;
+  }
+
+  .active-cyan-2 input[type=text]:focus:not([readonly]) {
+  border-bottom: 1px solid #4dd0e1;
+  box-shadow: 0 1px 0 0 #4dd0e1;
+  }
+
+  .button {
+  display: inline-block;
+  vertical-align: top;
+  width: 80px;
+  height: 30px;
+  line-height: 30px;
+  background: gray;
+  margin: 0 4px;
+  text-align: center;
+}
+
+  .active-cyan input[type=text] {
+  border-bottom: 1px solid #4dd0e1;
+  box-shadow: 0 1px 0 0 #4dd0e1;
+  }
+
+  .active-cyan .fa,
+  .active-cyan-2 .fa {
+  color: #4dd0e1;
+  }
+
+  .active-purple .fa,
+  .active-purple-2 .fa {
+  color: #ce93d8;
+  }
+
+  .active-pink .fa,
+  .active-pink-2 .fa {
+  color: #f48fb1;
+  }
+  section {
+    display: table;
+  }
+
+  .btn-label {
+    display: table-cell;
+    font-size: 14px;
+    margin-left: 8px;
+    min-width: 120px;
+  }
+
+  .button-row {
+    display: table-cell;
+    width: 490px;
+  }
+
+  .button-row .mat-button-base {
+    margin: 8px 8px 8px 0;
+  }
+
+  .flex-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: center;
+    width: 120px;
+  }
+  button {
+    margin: 0 8px 8px 0;
+  }
+
+  .container {
+    display: grid;
+    grid-auto-columns: minmax(15rem, auto);
+    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+    grid-gap: 1rem;
+    flex-basis: 20%;
+  }
+  .full-width {
+  width: 100%;
+}
+.left-form {
+  width: 50px;
+
+}
+
+.filler {
+
+  background: lightgreen;
+  width: 10px;
+}
+
+.right-buttons {
+  width: 50px;
+
+}
+.chip-add {
+  transform: scale(1);
+  cursor: pointer;
+    justify-content: space-between;
+
+}
+
+.add-chip-form{
+  justify-content: space-between;
+  border-radius: 0 !important;
+  outline: none;
+}
+
+.add-chip-group{
+  justify-content: space-between;
+}
+
+.add-new-chip{
+  cursor: pointer;
+}
+

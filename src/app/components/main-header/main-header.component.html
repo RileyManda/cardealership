@@ -1,0 +1,48 @@
+<mat-toolbar [ngStyle]="{ color: 'white' }">
+  <img src="assets/app_logo.png" />
+  <span class="gap"></span>
+  <span class="spacer"></span>
+  <a>
+    <button
+      class="btnCircle"
+      [matMenuTriggerFor]="menu">
+      {{getShortName(user.username)}}
+    </button>
+  </a>
+    <span class="gap"></span>
+    <div class="user-font">
+      <p class="uname"  [ngStyle]="{ color: 'grey' }">{{user.username}}</p>
+      <p class="role-name" [ngStyle]="{ color: 'grey' }">Administrator</p>
+    </div>
+
+  <a mat-icon-button [matMenuTriggerFor]="moreitems">
+    <mat-icon class="grey-icon">more_vert</mat-icon>
+  </a>
+
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item routerLink="/change-password">Change Password</button>
+    <button mat-menu-item (click)="addAdminDialog('Add Systems Administrator', {})"> Add Systems Administrator</button>
+<!--
+    <button
+    mat-menu-item
+    (click)="openDialog('Add', {})"
+    mat-flat-button
+    color="primary"
+  >
+    Add Administrator
+  </button> -->
+
+
+
+    <button mat-menu-item routerLink="/manage-admin">
+      Manage Systems Administrator
+    </button>
+    <button mat-menu-item routerLink="/manage-vehicles">Manage Vehicle Make</button>
+    <button mat-menu-item routerLink="/">Main Menu</button>
+    <button mat-menu-item routerLink="/login" (click)="logout()">LogOut</button>
+  </mat-menu>
+  <mat-menu #moreitems="matMenu">
+    <button mat-menu-item>Profile</button>
+    <button mat-menu-item>Settings</button>
+  </mat-menu>
+</mat-toolbar>

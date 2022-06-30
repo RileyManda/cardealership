@@ -1,5 +1,4 @@
 import { Component, OnInit, HostListener, HostBinding, Inject, Input } from '@angular/core';
-import {DOCUMENT} from '@angular/common';
 import { Router } from '@angular/router';
 
 @Component({

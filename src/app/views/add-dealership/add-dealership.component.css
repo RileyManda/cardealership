@@ -1,0 +1,24 @@
+body {
+  overflow-y: hidden;
+}
+
+.content {
+  /*margin-top: 58px;*/
+  justify-content: center;
+  max-width: 100%;
+  width: 1024px;
+  margin: 0 auto;
+  padding-top: 12px;
+  overflow: auto;
+
+
+}
+table {
+  width: 100%;
+  justify-content: center;
+  }
+
+.mat-chip-list-wrapper {
+  max-width: 1024px;
+  margin: 0 auto !important;
+}

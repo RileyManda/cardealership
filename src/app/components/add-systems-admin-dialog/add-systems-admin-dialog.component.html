@@ -1,0 +1,59 @@
+
+<mat-chip>Add Systems Administrator</mat-chip><br /><br />
+<div class="container">
+<div mat-dialog-content>
+  <ng-template #elseTemplate>
+    Confirm deletion of <b>{{local_data.dealershipname}}</b>
+  </ng-template><br>
+  <table cellspacing="0">
+    <tr>
+      <td>
+        <label>First Name</label>
+        <mat-form-field *ngIf="action != 'Delete'; else elseTemplate" class="small-form-field" appearance="outline">
+          <input placeholder="" matInput [(ngModel)]="local_data.dealershipname">
+        </mat-form-field>
+      </td>
+      <td>
+        <label>Last Name</label>
+        <mat-form-field *ngIf="action != 'Delete'; else elseTemplate" class="small-form-field" appearance="outline">
+          <input placeholder="" matInput [(ngModel)]="local_data.administrator">
+        </mat-form-field>
+      </td>
+    </tr>
+  </table>
+
+  <label>Email</label>
+  <mat-form-field class="small-form-field" appearance="outline">
+    <input matInput />
+  </mat-form-field>
+
+
+  <section class="example-section">
+    <label>Status</label><br><br>
+    <mat-radio-group>
+      <mat-radio-button class="example-margin" value="after"
+        >Active</mat-radio-button
+      >
+      <mat-radio-button class="example-margin" value="after"
+        >InActive</mat-radio-button
+      >
+      <mat-radio-button class="example-margin" value="after"
+        >Blocked</mat-radio-button
+      >
+    </mat-radio-group>
+  </section>
+  <!-- <br />
+  <button mat-raised-button class="allbuttons" routerLink="/dashboard">
+    Update Details
+  </button> -->
+
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button class="allbuttons" (click)="doAction()">
+    {{action}}
+  </button>
+  <!-- <button mat-raised-button class="allbuttons" (click)="closeDialog()">
+    Cancel
+  </button> -->
+</div>
+</div>

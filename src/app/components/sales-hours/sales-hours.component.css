@@ -1,0 +1,132 @@
+mat-chip {
+  max-width: 200px;
+}
+.height100p {
+  height: 100%;
+}
+.mat-grid-tile-custom {
+  overflow: visible!important;
+}
+
+.custom-mat-list {
+  padding-top: 50%!important;
+}
+
+.mat-grid-tile-custom .mat-figure {
+  align-items: unset!important;
+}
+
+
+
+
+
+
+
+section {
+  display: table;
+}
+
+.example-label {
+  display: table-cell;
+  font-size: 14px;
+  margin-left: 8px;
+  min-width: 120px;
+}
+
+.button-row {
+  display: table-cell;
+  width: 490px;
+}
+
+.button-row .mat-button-base {
+  margin: 8px 8px 8px 0;
+}
+
+.example-flex-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.example-button-container {
+  display: flex;
+  justify-content: center;
+  width: 120px;
+}
+
+
+.container {
+  display: grid;
+  grid-auto-columns: minmax(12rem, auto);
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  grid-gap: 1rem;
+  flex-basis: 20%;
+  grid: gap 2px;
+}
+
+.item {
+  background: #747373;
+  border: 3px solid #6e6e6e;
+  color: #636262;
+  padding: 2rem;
+  font-size: 2rem;
+  text-align: center;
+}
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.small-form-field{
+  width:170px !important;
+}
+
+.buttonWidth{
+  width: 200px!important;
+  min-width: unset!important;
+}
+
+
+.time-selection-forms{
+  width: 200px!important;
+  min-width: unset!important;
+}
+
+
+.closed-button{
+  width: 200px!important;
+  min-width: unset!important;
+  outline-style: dashed;
+  outline-color: #afadad;
+  outline-width: 1px;
+
+}
+
+.icon-btn-width{
+  width: 50px!important;
+  min-width: unset!important;
+}
+
+.icon-btn-width-hours{
+  width: 50px!important;
+  min-width: unset!important;
+  height: 55px;
+}
+
+.btn-toggle{
+  width: 100px!important;
+  min-width: unset!important;
+
+}
+.example-button-row {
+  display: table-cell;
+  width: 490px;
+}
+.add-new-chip{
+  cursor: pointer;
+}
+
+/* flex row */
+
+

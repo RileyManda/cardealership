@@ -1,0 +1,22 @@
+body {
+
+}
+
+.content {
+  /*margin-top: 58px;*/
+  justify-content: center;
+  max-width: 100%;
+  width: 1024px;
+  margin: 0 auto;
+  padding-top: 2%;
+
+}
+table {
+  width: 100%;
+  justify-content: center;
+  }
+
+.mat-chip-list-wrapper {
+  max-width: 1024px;
+  margin: 0 auto !important;
+}

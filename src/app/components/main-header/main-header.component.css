@@ -1,0 +1,90 @@
+.spacer {
+  flex: 1 1 auto;
+}
+
+.gap {
+  padding-left: 10px;
+}
+
+.mat-toolbar {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-between;
+}
+
+.align.a {
+  vertical-align: text-top;
+  color: black;
+}
+
+.align.b {
+  vertical-align: text-bottom;
+}
+
+.position-fixed {
+  position: fixed;
+}
+
+.grey-icon {
+  color: rgb(59, 59, 59);
+}
+
+.btnCircle {
+  border-radius: 50%;
+  padding: 2vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5px;
+  height: 5px;
+  font-size: 2vw;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: black;
+  color: #fff;
+}
+.user-font {
+line-height: normal;
+align-items: center;
+  white-space: normal;
+}
+
+.uname {
+  margin-top: 6px;
+  font-size:medium;
+
+}
+
+.role-name {
+
+  font-size:small;
+
+}
+
+
+/* height:40px;
+
+  overflow:hidden;
+  white-space: pre;
+
+  clear: both;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap; */
+
+.btnBackgroundColor {
+  background: rgb(107, 110, 107);
+}
+
+.btnColor {
+  color: white;
+}
+#nav {
+  position: absolute;
+  top: 0;
+  margin: 0 auto;
+  z-index: 9999;
+  background-color: white;
+}

@@ -1,0 +1,70 @@
+<div class="login-container">
+  <div class="form-container">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div *ngIf="submitted && f['username'].errors" class="invalid-feedback" class="error">
+        <div *ngIf="f['username'].errors['required']">Email is required</div>
+      </div>
+      <div *ngIf="submitted && f['password'].errors" class="invalid-feedback">
+        <div *ngIf="f['password'].errors['required']">Password is required</div>
+      </div>
+      <p>Welcome</p>
+      <h2 class="text-center"><strong>Sign into your account</strong></h2>
+
+      <!-- <div class="validation-error">Invalid Username or Password</div> -->
+      <!-- Error Message Component to Come Here -->
+      <mat-form-field appearance="fill">
+        <mat-label>Email</mat-label>
+        <input
+          matInput
+          placeholder="UserName/Email"
+          formControlName="username"
+          [ngClass]="{ 'is-invalid': submitted && f['username'].errors }"
+        />
+
+        <mat-icon matSuffix>email</mat-icon>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Password</mat-label>
+        <input
+          matInput
+          placeholder="Password"
+          type="password"
+          [type]="hide ? 'password' : 'text'"
+          formControlName="password"
+          [ngClass]="{ 'is-invalid': submitted && f['password'].errors }"
+        />
+
+        <button
+          mat-icon-button
+          matSuffix
+          (click)="hide = !hide"
+          [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hide"
+        >
+          <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+        </button>
+      </mat-form-field>
+
+      <br />
+
+      <mat-checkbox class="">Remember me</mat-checkbox><br /><br />
+      <button mat-raised-button class="allbuttons">
+        <span
+          *ngIf="loading"
+          class="spinner-border spinner-border-sm mr-1"
+        ></span>
+        Sign In</button
+      ><br /><br />
+      <p class="member-link">
+        Not already a member?
+        <a mat-button routerLink="../register"> Sign Up</a>
+      </p>
+      <p class="member-link">
+        Forgot password
+        <a mat-button routerLink="../reset">Reset</a>
+      </p>
+    </form>
+    <div class="image-holder"></div>
+  </div>
+</div>

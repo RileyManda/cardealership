@@ -1,0 +1,123 @@
+<div class="container">
+  <div fxLayout="row" fxLayout.gt-xs="row">
+    <mat-form-field class="full-width" appearance="outline">
+      <mat-icon matSuffix>search</mat-icon>
+      <mat-label>Search</mat-label>
+      <input
+        matInput
+        placeholder="Search"
+        class="form-control form-control-sm ml-3 w-75"
+        type="text"
+        aria-label="Search"
+        #input
+      />
+    </mat-form-field>
+  </div>
+
+  <div fxLayout="column" fxLayout.gt-xs="row">
+    <div class="example-button-row">
+      <button mat-stroked-button [matMenuTriggerFor]="bulkaction">
+        Bulk Actions
+        <mat-icon>keyboard_arrow_down</mat-icon>
+      </button>
+      <button mat-stroked-button routerLink="/add-dealership">
+        Add Dealerships
+      </button>
+      <button mat-stroked-button>
+        Filters<mat-icon>keyboard_arrow_down</mat-icon>
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="btn-align">
+  <mat-menu #bulkaction="matMenu">
+    <button mat-menu-item>
+      <mat-icon>list_alt</mat-icon>
+      Export To Csv
+    </button>
+
+    <button mat-menu-item>
+      <mat-icon>list_alt</mat-icon>
+      Export To Pdf
+    </button>
+  </mat-menu>
+</div>
+
+<div class="mat-elevation-z8">
+
+  <!-- Table -------------------------------------------------------------->
+  <table
+    mat-table
+    [dataSource]="dataSource"
+    #mytable
+    class="my-table mat-elevation-z8"
+  >
+    <!-- Select -->
+
+    <!-- Id Column -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef>ID</th>
+      <td mat-cell *matCellDef="let element">{{ element.id }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="dealershipnum">
+      <th mat-header-cell *matHeaderCellDef>Dealership#</th>
+      <td mat-cell *matCellDef="let element">{{ element.dealershipnum }}</td>
+    </ng-container>
+
+    <!-- dealership Column -->
+    <ng-container matColumnDef="dealershipname">
+      <th mat-header-cell *matHeaderCellDef>Dealership Name</th>
+      <td mat-cell *matCellDef="let element">{{ element.dealershipname }}</td>
+    </ng-container>
+
+    <!-- Administrator Column -->
+    <ng-container matColumnDef="administrator">
+      <th mat-header-cell *matHeaderCellDef>Administrator</th>
+      <td mat-cell *matCellDef="let element">
+        <div
+        fxLayout="row wrap"
+        fxLayout.xs="row"
+        fxLayoutGap="1px grid"
+        style="margin-right: 1px"
+      >
+        <mat-chip-list
+          #chipList
+          aria-label="Admin selection"
+          class="add-chip-form"
+         >
+          <mat-chip (click)="openDialog('Update Details', element)">
+            {{ element.administrator }}
+          </mat-chip>
+
+          <mat-chip class="add-new-chip">
+              <mat-icon mat-button (click)="addAdminDialog('Add', {})" >add</mat-icon>
+          </mat-chip>
+          <!-- <input
+            [matChipInputFor]="chipList"
+            [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+            [matChipInputAddOnBlur]="addOnBlur"
+            (matChipInputTokenEnd)="add($event)"
+          /> -->
+        </mat-chip-list>
+      </div>
+      </td>
+    </ng-container>
+
+    <!-- Action Column -->
+    <ng-container matColumnDef="action">
+      <th mat-header-cell *matHeaderCellDef>Action</th>
+      <td mat-cell *matCellDef="let element" class="action-link">
+        <a (click)="openDialog('Update Details', element)">
+          <mat-icon mat-button fontSet="material-icons-outlined"
+            >edit</mat-icon
+          ></a
+        >
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+</div>

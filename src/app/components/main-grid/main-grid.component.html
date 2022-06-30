@@ -1,0 +1,158 @@
+<div class="container">
+  <div fxLayout="column" fxLayout.gt-xs="row">
+    <label>Dealership Name</label>
+    <mat-form-field class="full-width" appearance="outline">
+      <!-- <mat-label>Dealership Name</mat-label> -->
+      <input matInput />
+    </mat-form-field>
+    <label>Dealership Logo</label>
+    <mat-form-field class="example-full-width" appearance="outline">
+      <input matInput />
+    </mat-form-field>
+
+    <label>Dealership Phone Number</label>
+    <mat-form-field class="example-full-width" appearance="outline">
+      <input matInput />
+    </mat-form-field>
+    <label>Dealership Email</label>
+    <mat-form-field class="example-full-width" appearance="outline">
+      <input matInput />
+    </mat-form-field>
+    <label>Dealership Url</label>
+    <mat-form-field class="example-full-width" appearance="outline">
+      <input matInput />
+    </mat-form-field>
+    <!-- double forms:adresss1 address 2 -->
+    <table cellspacing="0">
+      <tr>
+        <td>
+          <label>Dealership Address</label>
+          <mat-form-field class="small-form-field" appearance="outline">
+            <mat-label>Address 1</mat-label>
+            <input matInput placeholder="Ex. San Francisco" />
+          </mat-form-field>
+        </td>
+
+        <td>
+          <br />
+          <mat-form-field class="small-form-field" appearance="outline">
+            <mat-label>Address 2</mat-label>
+            <input matInput placeholder="Ex. California" />
+          </mat-form-field>
+        </td>
+      </tr>
+    </table>
+
+    <label>City</label>
+    <mat-form-field class="example-full-width" appearance="outline">
+      <mat-icon matSuffix>search</mat-icon>
+      <input matInput />
+    </mat-form-field>
+
+    <table cellspacing="0">
+      <tr>
+        <td>
+          <label>State</label>
+          <mat-form-field class="small-form-field" appearance="outline">
+            <mat-icon matSuffix>search</mat-icon>
+            <input matInput placeholder="Ex. San Francisco" />
+          </mat-form-field>
+        </td>
+
+        <td>
+          <label>Zip Code</label>
+          <mat-form-field class="small-form-field" appearance="outline">
+            <mat-label>Zip Code</mat-label>
+            <input matInput placeholder="Ex. California" />
+          </mat-form-field>
+        </td>
+      </tr>
+    </table>
+
+    <!-- double forms:state and zip -->
+  </div>
+
+  <div fxLayout="column" fxLayout.gt-xs="row">
+    <table cellspacing="0">
+      <tr>
+        <td>
+          <label>Dealership Prinsciple</label>
+          <mat-form-field class="small-form-field" appearance="outline">
+            <mat-label>FirstName</mat-label>
+            <input matInput placeholder="Ex. San Francisco" />
+          </mat-form-field>
+        </td>
+
+        <td>
+          <br />
+          <mat-form-field class="small-form-field" appearance="outline">
+            <mat-label>LastName</mat-label>
+            <input matInput />
+          </mat-form-field>
+        </td>
+      </tr>
+    </table>
+
+    <label>Cell #</label>
+    <mat-form-field class="example-full-width" appearance="outline">
+      <input matInput />
+    </mat-form-field>
+    <label>Email Address</label>
+    <mat-form-field class="example-full-width" appearance="outline">
+      <input matInput />
+    </mat-form-field>
+    <!-- alternate contact-double form -->
+    <mat-divider></mat-divider>
+
+    <table cellspacing="0">
+      <tr>
+        <td>
+          <label>Alternate Contact</label>
+          <mat-form-field class="small-form-field" appearance="outline">
+            <mat-label>FirstName</mat-label>
+            <input matInput />
+          </mat-form-field>
+        </td>
+
+        <td>
+          <br />
+          <mat-form-field class="small-form-field" appearance="outline">
+            <mat-label>Last Name</mat-label>
+            <input matInput />
+          </mat-form-field>
+        </td>
+      </tr>
+    </table>
+
+    <label>Cell #</label>
+    <mat-form-field class="example-full-width" appearance="outline">
+      <mat-icon matSuffix>search</mat-icon>
+      <input matInput />
+    </mat-form-field>
+
+    <label>Email Address</label>
+    <mat-form-field class="example-full-width" appearance="outline">
+      <input matInput />
+    </mat-form-field>
+  </div>
+
+  <div fxLayout="column" fxLayout.gt-xs="row">
+    <label>Affialiated Dealerships</label>
+    <mat-form-field class="example-full-width" appearance="outline">
+      <mat-icon matSuffix>search</mat-icon>
+      <input matInput />
+    </mat-form-field>
+    <label>Add Sales Hours</label><br />
+    <app-sales-hours></app-sales-hours><br />
+
+    <label>Status</label><br /><br />
+    <app-admin-checkboxes></app-admin-checkboxes><br />
+    <mat-list-item role="listitem">
+      <button mat-raised-button class="allbuttons" routerLink="/dashboard">
+        Update Details
+      </button>
+    </mat-list-item>
+  </div>
+</div>
+
+

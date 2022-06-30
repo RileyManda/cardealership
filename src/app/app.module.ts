@@ -1,59 +1,66 @@
-import { NgModule } from '@angular/core';
-
-import { BrowserModule } from '@angular/platform-browser';
+import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-// angular material
-import {MatMenuModule } from '@angular/material/menu';
-import {MatButtonModule} from '@angular/material/button';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import { MatIconModule } from "@angular/material/icon";
+import {BrowserModule} from '@angular/platform-browser';
 
-// components
-import { FooterComponent } from './components/footer/footer.component';
-import { SidebarComponent } from './components/sidebar/sidebar.component';
-import { HomeComponent } from './views/home/home.component';
-import { LoginComponent } from './views/login/login.component';
-import { ResetPasswordComponent } from './views/reset-password/reset-password.component';
-import { RegisterComponent } from './views/register/register.component';
-import { LoaderComponent } from './components/loader/loader.component';
-import { HeaderComponent } from './components/header/header.component';
-import { DashheaderComponent } from './components/dashheader/dashheader.component';
-import { PageNotFoundComponent } from './views/page-not-found/page-not-found.component';
-import { DashboardComponent } from './views/dashboard/dashboard.component';
+import { AppLoaderComponent } from './components/app-loader/app-loader.component';
+
+
+// Mat
+import { MatButtonModule } from '@angular/material/button';
+import { LayoutModule } from '@angular/cdk/layout';
+import { ModuleCheckboxesComponent } from './components/module-checkboxes/module-checkboxes.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
+import { MaterialModule } from './material-module';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatCardModule } from '@angular/material/card';
+import { MatOptionModule } from '@angular/material/core';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+// used to create fake backend
+import { fakeBackendProvider } from './_helpers';
+import { JwtInterceptor, ErrorInterceptor } from './_helpers';
+import { BreadcrumbsComponent } from './components/breadcrumbs/breadcrumbs.component';
+
+
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    FooterComponent,
-    SidebarComponent,
-    HomeComponent,
-    LoginComponent,
-    ResetPasswordComponent,
-    RegisterComponent,
-    LoaderComponent,
-    HeaderComponent,
-    DashheaderComponent,
-    PageNotFoundComponent,
-    DashboardComponent
-   
+    BreadcrumbsComponent
+
+
+
+
   ],
+
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA],
   imports: [
-    BrowserModule,
     AppRoutingModule,
+    MaterialModule,
+    BrowserModule,
     BrowserAnimationsModule,
-    MatToolbarModule,
+    MatGridListModule,
+    MatCardModule,
+    MatMenuModule,
     MatIconModule,
     MatButtonModule,
-    MatMenuModule
+    LayoutModule,
 
-    
-    
+
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+
+    // provider used to create fake backend
+    fakeBackendProvider
+],
+bootstrap: [AppComponent]
 })
 export class AppModule { }

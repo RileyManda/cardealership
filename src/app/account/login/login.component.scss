@@ -1,0 +1,161 @@
+.login-container {
+  background: #ffffff;
+  padding: 80px 0;
+  height: 100%;
+}
+
+.login-container .image-holder {
+  display: table-cell;
+  width: auto;
+  background: url(../../../assets/half_right.png);
+  background-size: cover;
+  height: 100%;
+}
+
+.login-container .form-container {
+  display: table;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.login-container form {
+  display: table-cell;
+  width: 350px;
+  background-color: #ffffff;
+  padding: 40px 60px;
+  color: #0a0a0a;
+  height: 450px;
+}
+
+@media (max-width: 991px) {
+  .login-container form {
+    padding: 90px;
+  }
+}
+
+.login-container form h2 {
+  font-size: 24px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.login-container form .form-control {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #ffffff;
+  border-radius: 0;
+  box-shadow: none;
+  outline: none;
+  color: inherit;
+  text-indent: 0px;
+  height: 40px;
+}
+
+.login-container form .form-check {
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.login-container form .btn-primary {
+  background: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 11px;
+  box-shadow: none;
+  margin-top: 35px;
+  text-shadow: none;
+  outline: none !important;
+}
+
+.rlogin-container form .btn-primary:hover,
+.login-container form .btn-primary:active {
+  background: #ffffff;
+}
+
+.login-container form .btn-primary:active {
+  transform: translateY(1px);
+}
+
+.login-container form .already {
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  color: #ffffff;
+  opacity: 0.9;
+  text-decoration: none;
+}
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.mat-form-field-appearance-fill .mat-form-field-flex {
+  border: 1px solid #808080;
+  background-color: #ffffff !important;
+}
+
+::ng-deep .mat-form-field-underline {
+  display: none;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+::ng-deep .custom-frame {
+  & .mat-checkbox-background,
+  .mat-checkbox-frame {
+    border-radius: 70% !important;
+  }
+}
+
+mat-icon {
+  color: #a9a9a9;
+}
+
+.member-link {
+  text-align: center;
+}
+
+.member-link a {
+  color: #2d6db1;
+}
+
+.validation-error {
+  background: #ea2328;
+  color: #ffffff;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+p {
+  color: #808080;
+}
+
+.remember-me-check {
+  font-size: 12px !important;
+  color: #808080 !important;
+}
+
+input[type="checkbox"] {
+  background-color: #07abe9 !important;
+  border-color: #07abe9 !important;
+}
+.allbuttons {
+  color: #ffffff;
+  background-color: #25b34f;
+  width: 300px !important;
+  min-width: unset !important;
+}
+
+.invalid-feedback {
+  color: #ffffff;
+  background-color: #ee3a3a;
+  width: '100%' !important;
+  min-width: unset !important;
+}
+
